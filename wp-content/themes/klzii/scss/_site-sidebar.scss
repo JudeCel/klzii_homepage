@@ -1,0 +1,117 @@
+//
+// Sidebars
+// --------------------------------------------------
+
+
+.sidebar {
+	color: #333333;
+    padding-top: 40px;
+	padding-top: 4rem;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	li {
+		list-style-type: none;
+		margin-bottom: 6px;
+		margin-bottom: 0.6rem;
+		word-wrap: break-word;
+	}
+
+	ul > li:last-child {
+		margin-bottom: 0;
+	}
+
+	.widget {
+		margin-bottom: 40px;
+		margin-bottom: 4rem;
+	}
+}
+
+.sidebar-blueEnvelope {
+	background-color: #d2eff7;
+	.header {
+		background-color: #36a7da;
+		padding: 20px;
+		padding-bottom: 5px;
+		position: relative;
+		&:after {
+		    content: '';
+		    background: url(/wp-content/uploads/2016/08/icon-arrow-down.png) center no-repeat;
+		    background-size: contain;
+		    position: absolute;
+		    width: 100%;
+		    height: 62px;
+		    bottom: -58px;
+		    left: 0px;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			margin-bottom: 0px;
+			color: #ffffff;
+		}
+	}
+	.body {
+		padding: 20px;
+		padding-top: 70px;
+	}
+}
+.dummyBox {
+	background-color: #f7f7f7;
+	height: 210px;
+	width: 100%;
+}
+.sidebarBox {
+	.header {
+		padding: 35px;
+		h1,h2,h3,h4,h5,h6 {
+			color: #ffffff;
+			text-align: center;
+			line-height: 1.4;
+			max-width: 260px;
+			margin: 0px auto;
+			&:before {
+			    content: '';
+			    background: url(/wp-content/uploads/2016/08/icon-left-quote.png) center no-repeat;
+			    background-size: cover;
+			    position: relative;
+			    display: inline-block;
+			    margin-right: 6px;
+			    bottom: -3px;
+			    width: 32px;
+			    height: 26px;
+			}
+			&:after {
+			    content: '';
+			    background: url(/wp-content/uploads/2016/08/icon-right-quote.png) center no-repeat;
+			    background-size: cover;
+			    display: inline-block;
+			    margin-left: 6px;
+    			margin-bottom: -10px;
+			    width: 32px;
+			    height: 26px;
+			}
+		}
+	}
+	.body {
+			padding: 20px;
+	}
+	&.violetBox {
+		border-bottom: 3px solid #a7429e;
+		.header {
+			background-color: #a7429e;
+		}
+		.body {
+			border: 1px solid #e4e4e4;
+		}
+	}
+	&.blueBox {
+		border-bottom: 3px solid #36a7da;
+		.header {
+			background-color: #36a7da;
+		}
+		.body {
+			border: 1px solid #e4e4e4;
+		}
+	}
+}

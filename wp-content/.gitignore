@@ -1,0 +1,14 @@
+# Plugins ignore
+plugins/w3-total-cache/*
+plugins/wordfence/*
+plugins/wp-scss/cache/*
+
+# WP default themes
+themes/twentyfifteen/*
+themes/twentyfourteen/*
+themes/twentythirteen/*
+themes/twentytwelve/*
+
+# Other WP folders
+cache/*
+upgrade/*

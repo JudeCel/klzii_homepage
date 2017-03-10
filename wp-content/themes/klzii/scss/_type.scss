@@ -1,0 +1,146 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Headings
+// -------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #333;
+	font-family: $font-asap;
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 0 0 16px;
+	/* margin: 0 0 1.6rem; */
+	margin-bottom: 0.75em;
+}
+h1 {
+	font-size: 45px;
+	font-size: 4.5rem;
+}
+h2 {
+	font-size: 40px;
+	font-size: 4rem;
+}
+h3 {
+	font-size: 35px;
+	font-size: 3.5rem;
+}
+h4 {
+	font-size: 30px;
+	font-size: 3rem;
+}
+h5 {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+h6 {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+
+// Body text
+// -------------------------
+
+p {
+	margin: 0 0 24px;
+	margin: 0 0 2.4rem;
+	padding: 0;
+}
+strong {
+	font-weight: 700;
+}
+.entry-content code {
+	background-color: #333;
+	color: #ddd;
+}
+cite {
+	font-style: normal;
+}
+
+
+// Lists
+// -------------------------
+ul,
+ol {
+	margin-top: 0;
+	margin-bottom: 10px;
+
+	ul, ol {
+		margin-bottom: 0;
+	}
+}
+
+
+// Tables
+// -------------------------
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	margin-bottom: 40px;
+	margin-bottom: 4rem;
+	width: 100%;
+}
+
+tbody {
+	border-bottom: 1px solid #ddd;
+}
+
+th,
+td {
+	text-align: left;
+}
+
+th {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+td {
+	border-top: 1px solid #ddd;
+	padding: 6px 0;
+	padding: 0.6rem 0;
+}
+
+
+// Misc
+// -------------------------
+
+// Blockquotes
+blockquote {
+	padding: 10px 20px;
+	margin: 0 0 20px;
+	font-size: 17.5px;
+	border-left: 5px solid #eee;
+	footer, small, .small {
+		display: block;
+		font-size: 80%;
+		line-height: 1.42857143;
+		color: #777;
+
+		&:before {
+			content: '\2014 \00A0';
+		}
+	}
+	&:before, &:after {
+		content: "";
+	}
+}
+
+// Objects
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+	max-width: 100%;
+}

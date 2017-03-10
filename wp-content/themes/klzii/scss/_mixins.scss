@@ -1,0 +1,103 @@
+//
+// Mixins
+// --------------------------------------------------
+
+
+// Functions
+// -------------------------
+
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+// Clearfix Hack
+// -------------------------
+
+@mixin clearfix {
+	*zoom: 1;
+	&:before {
+		content: " ";
+		clear: table;
+	}
+	&:after {
+		clear: both;
+		content: " ";
+		display: table;
+	}
+}
+
+// Vendor prefixers
+// -------------------------
+
+@mixin box-sizing($box-sizing: content-box) {
+	-webkit-box-sizing: $box-sizing;
+	-moz-box-sizing:    $box-sizing;
+	box-sizing:         $box-sizing;
+}
+@mixin border-radius($args...) {
+	-webkit-border-radius: $args;
+	-moz-border-radius:    $args;
+	border-radius:         $args;
+}
+@mixin box-shadow($args...) {
+	-webkit-box-shadow: $args;
+	-moz-box-shadow:    $args;
+	box-shadow:         $args;
+}
+@mixin linear-gradient($fromColor, $toColor) {
+	background: $fromColor; // Old browsers
+	background: -moz-linear-gradient(top, $fromColor 0%, $toColor 100%); // FF3.6+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$fromColor), color-stop(100%,$toColor)); // Chrome,Safari4+
+	background: -webkit-linear-gradient(top, $fromColor 0%,$toColor 100%); // Chrome10+,Safari5.1+
+	background: -o-linear-gradient(top, $fromColor 0%,$toColor 100%); // Opera 11.10+
+	background: -ms-linear-gradient(top, $fromColor 0%,$toColor 100%); // IE10+
+	background: linear-gradient(to bottom, $fromColor 0%,$toColor 100%); // W3C
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$fromColor}', endColorstr='#{$toColor}',GradientType=0 ); // IE6-9
+}
+@mixin radial-gradient($fromColor, $toColor) {
+	background: $fromColor; // Old browsers
+	background: -moz-radial-gradient(center, ellipse cover, $fromColor 0%, $toColor 100%); // FF3.6+
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$fromColor), color-stop(100%,$toColor)); // Chrome,Safari4+
+	background: -webkit-radial-gradient(center, ellipse cover, $fromColor 0%,$toColor 100%); // Chrome10+,Safari5.1+
+	background: -o-radial-gradient(center, ellipse cover, $fromColor 0%,$toColor 100%); // Opera 12+
+	background: -ms-radial-gradient(center, ellipse cover, $fromColor 0%,$toColor 100%); // IE10+
+	background: radial-gradient(ellipse at center, $fromColor 0%,$toColor 100%); // W3C
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$fromColor}', endColorstr='#{$toColor}',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+}
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition:    $args;
+	-ms-transition:     $args;
+	-o-transition:      $args;
+	transition:         $args;
+}
+
+@mixin rem($property, $values) {
+	$px : ();
+	$rem: ();
+
+	@each $value in $values {
+		@if $value == 0 or $value == auto {
+			$px : append($px , $value);
+			$rem: append($rem, $value);
+		} @else {
+			$unit: unit($value);
+			$val: parseInt($value);
+
+			@if $unit == "px" {
+				$px : append($px,  $value);
+				$rem: append($rem, ($val / 10 + rem));
+			}
+			@if $unit == "rem" {
+				$px : append($px,  ($val * 10 + px));
+				$rem: append($rem, $value);
+			}
+		}
+	}
+	@if $px == $rem {
+		#{$property}: $px;
+	} @else {
+		#{$property}: $px;
+		#{$property}: $rem;
+	}
+}

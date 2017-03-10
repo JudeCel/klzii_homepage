@@ -1,0 +1,126 @@
+//
+// Site Footer
+// --------------------------------------------------
+
+
+.site-footer {
+	background-color: #242f31;
+	color: #999999;
+	font-size: 14px;
+	font-size: 1.4rem;
+	padding: 50px 0;
+	padding: 5rem 0;
+
+	a {
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+
+// Footer Widgets
+// --------------------------------------------------
+
+// .footer-widgets {
+// 	color: #999999;
+// 	clear: both;
+// 	padding: 40px 0 16px;
+// 	padding: 4rem 0 1.6rem;
+// }
+
+// .footer-widgets-1,
+// .footer-widgets-3 {
+// 	width: 350px;
+// }
+
+// .footer-widgets-2 {
+// 	width: 360px;
+// }
+
+// .footer-widgets-1 {
+// 	margin-right: 40px;
+// 	margin-right: 4rem;
+// }
+
+// .footer-widgets-1,
+// .footer-widgets-2 {
+// 	float: left;
+// }
+
+// .footer-widgets-3 {
+// 	float: right;
+// }
+
+// .footer-widgets a {
+// 	border-bottom: 1px solid #666;
+// 	color: #999;
+// }
+
+// .footer-widgets a:hover {
+// 	color: #ddd;
+// }
+
+// .footer-widgets .widget {
+// 	margin-bottom: 24px;
+// 	margin-bottom: 2.4rem;
+// }
+
+// .footer-widgets .widget-title {
+// 	color: #fff;
+// }
+
+// .footer-widgets li {
+// 	list-style-type: none;
+// 	margin-bottom: 6px;
+// 	margin-bottom: 0.6rem;
+// 	word-wrap: break-word;
+// }
+
+// .footer-widgets .search-form input:focus {
+// 	border: 1px solid #ddd;
+// }
+.footer-menu {
+    padding-top: 20px;
+	a {
+		padding: 10px 5px;
+		text-decoration: none;
+		color: #999999;
+		font-size: 16px;
+		margin-right: 30px;
+	    margin-right: 11%;
+		&:last-of-type {
+			margin-right: 0px;
+		}
+		&:active,
+		&:visited {
+			color: #999999;
+		}
+		&:hover,
+		&:focus {
+			color: #cccccc;
+		}
+	}
+}
+.footer-menu2 {
+	padding: 30px 0px;;
+	.genesis-nav-menu {
+		text-align: center;
+		.menu-item {
+			float: none;
+			display: inline-block;
+			&.current-menu-item > a {
+				color: #ffffff;
+			}
+			a {
+				color: #666666;
+				padding: 15px;
+				&:hover,
+				&:active {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}

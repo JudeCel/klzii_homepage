@@ -1,0 +1,63 @@
+//
+// Variables
+// --------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+@font-face {
+  font-family: 'Asap';
+  src: url('font/Asap-Regular.eot?#iefix') format('embedded-opentype'),  url('font/Asap-Regular.otf')  format('opentype'),
+	     url('font/Asap-Regular.woff') format('woff'), url('font/Asap-Regular.ttf')  format('truetype'), url('font/Asap-Regular.svg#Asap-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Asap';
+  src: url('font/Asap-Italic.eot?#iefix') format('embedded-opentype'),  url('font/Asap-Italic.otf')  format('opentype'),
+	     url('font/Asap-Italic.woff') format('woff'), url('font/Asap-Italic.ttf')  format('truetype'), url('font/Asap-Italic.svg#Asap-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Asap';
+  src: url('font/Asap-Medium.eot?#iefix') format('embedded-opentype'),  url('font/Asap-Medium.otf')  format('opentype'),
+       url('font/Asap-Medium.woff') format('woff'), url('font/Asap-Medium.ttf')  format('truetype'), url('font/Asap-Medium.svg#Asap-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Asap';
+  src: url('font/Asap-MediumItalic.eot?#iefix') format('embedded-opentype'),  url('font/Asap-MediumItalic.otf')  format('opentype'),
+       url('font/Asap-MediumItalic.woff') format('woff'), url('font/Asap-MediumItalic.ttf')  format('truetype'), url('font/Asap-MediumItalic.svg#Asap-BoldItalic') format('svg');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Asap';
+  src: url('font/Asap-Bold.eot?#iefix') format('embedded-opentype'),  url('font/Asap-Bold.otf')  format('opentype'),
+       url('font/Asap-Bold.woff') format('woff'), url('font/Asap-Bold.ttf')  format('truetype'), url('font/Asap-Bold.svg#Asap-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Asap';
+  src: url('font/Asap-BoldItalic.eot?#iefix') format('embedded-opentype'),  url('font/Asap-BoldItalic.otf')  format('opentype'),
+       url('font/Asap-BoldItalic.woff') format('woff'), url('font/Asap-BoldItalic.ttf')  format('truetype'), url('font/Asap-BoldItalic.svg#Asap-BoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+// Base fonts
+$font-sans-serif:	'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif:		Georgia, 'Times New Roman', Times, serif;
+$font-monospace:	Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+// Main fonts
+$font-primary:		'Lato', $font-sans-serif;
+$font-sourcesans:	'Source Sans Pro', $font-sans-serif;
+$font-opensans:		'Open Sans', $font-sans-serif;
+$font-arial:		Arial, 'Helvetica Neue', Helvetica, sans-serif;
+/* $font-asap:     'Asap', Arial, 'Helvetica Neue', Helvetica, sans-serif; */
+$font-asap:			'Source Sans Pro', sans-serif;;

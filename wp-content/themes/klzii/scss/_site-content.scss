@@ -1,0 +1,736 @@
+//
+// Site Content
+// --------------------------------------------------
+
+.site-container {
+	overflow-x: hidden;
+}
+
+// Float Clearing
+// -------------------------
+
+.archive-pagination,
+.clearfix,
+.entry,
+.entry-pagination,
+.footer-widgets,
+.menu,
+.nav-primary,
+.nav-secondary,
+.site-container,
+.site-footer,
+.site-header,
+.site-inner,
+.wrap {
+	@include clearfix;
+}
+
+
+// Titles
+// -------------------------
+
+.entry-title {
+	font-size: 45px;
+	font-size: 4.5rem;
+	line-height: 1;
+	a {
+		&:hover {
+		}
+	}
+}
+
+.widget-title {
+	font-size: 16px;
+	font-size: 1.6rem;
+	margin-bottom: 24px;
+	margin-bottom: 2.4rem;
+	text-transform: uppercase;
+}
+
+.archive-title {
+	font-size: 20px;
+	font-size: 2rem;
+	margin-bottom: 24px;
+	margin-bottom: 2.4rem;
+}
+
+// Content Area
+// --------------------------------------------------
+
+// Entries
+// -------------------------
+
+.entry {
+	padding: 40px 0px;
+	padding: 4rem 0px;
+}
+.full-width-content .entry {
+	padding-bottom: 0px;
+}
+
+.entry-content .search-form {
+	width: 50%;
+}
+
+.entry-meta {
+	color: #999;
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.entry-header .entry-meta {
+	margin-bottom: 24px;
+	margin-bottom: 2.4rem;
+}
+
+.entry-footer .entry-meta {
+	border-top: 2px solid #f5f5f5;
+	margin: 0 -40px;
+	margin: 0 -4rem;
+	padding: 32px 40px 8px;
+	padding: 3.2rem 4rem 0.8rem;
+}
+
+.entry-comments-link::before {
+	content: "\2014";
+	margin: 0 6px 0 2px;
+	margin: 0 0.6rem 0 0.2rem;
+}
+
+.entry-categories,
+.entry-tags {
+	display: block;
+}
+
+
+// IE Fixes
+// --------------------------------------------------
+
+// Inline block fix
+.lt-ie8 {
+	i,
+	.icon,
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.btn {
+		display: inline;
+	}
+}
+
+.splashArrow {
+	position: relative;
+    left: 100px;
+    margin-top: 35px;
+    transform: rotateZ(14deg);
+}
+.coloredBox {
+    display: inline-block;
+    vertical-align: top;
+    width: 17.4%;
+    margin-left: 10px;
+    &.first {
+	    margin-left: 0;
+	}
+	.coloredBoxInner {
+		padding: 7px;
+	    margin-bottom: 28px;
+	    background: #fff;
+		.top {
+			color: #ffffff;
+			text-align: center;
+			min-height: 125px;
+			.text {
+				padding: 20px 15px;
+				min-height: 110px;
+				display: table;
+				margin: 0 auto;
+			}
+			h1,h2,h3,h4,h5 {
+				color: #ffffff;
+				margin: 0px;
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+		.bottom {
+			padding: 18px 10px;
+			.character {
+				margin: -30px auto 0px;
+				display: block;
+    			height: 150px;
+			}
+			p:empty {
+				display: none;
+			}
+			p:last-of-type:not(:empty) {
+				margin:0px;
+			    font-size: 15px;
+			    min-height: 180px;
+			}
+			.btn {
+				font-size: 16px;
+			}
+		}
+		&.blue { 
+			.top { background-color: #58bdeb; }
+			.bottom { background-color: #e3f6ff; }
+		}
+		&.violet { 
+			.top { background-color: #a7429e; }
+			.bottom { background-color: #fae4f8; }
+		}
+		&.orange { 
+			.top { background-color: #ea7d10; }
+			.bottom { background-color: #fdf2e7; }
+		}
+		&.green { 
+			.top { background-color: #00b23c; }
+			.bottom { background-color: #cef0da; }
+		}
+		&.green2 { 
+			.top { background-color: #4cb74a; }
+			.bottom { background-color: #cef0da; }
+		}
+		&.dGreen { 
+			.top { background-color: #008c62; }
+			.bottom { background-color: #ddf4ee; }
+		}
+		&.red { 
+			.top { background-color: #9b0e26; }
+			.bottom { background-color: #fbe8eb; }
+		}
+	}
+}
+
+.bg-splash {
+	/*background: url(/wp-content/uploads/2016/08/bg-splash.png) center no-repeat;*/
+	background: #259FD7 url(/wp-content/uploads/2017/01/klzii-bkg-pattern-10.png) center no-repeat;
+	background-size: cover;
+}
+.bg-splash-violet {
+	/*background: url(/wp-content/uploads/2016/08/bg-splash2.png) center no-repeat;*/
+	background: #A947A1 url(/wp-content/uploads/2017/01/klzii-bkg-pattern-10.png) center no-repeat;
+	background-size: cover;
+}
+.bg-splash-red {
+	/*background: url(/wp-content/uploads/2016/08/bg-splash2.png) center no-repeat;*/
+	background: #9b0e26 url(/wp-content/uploads/2017/01/klzii-bkg-pattern-10.png) center no-repeat;
+	background-size: cover;
+}
+.bg-splash-green {
+	/*background: url(/wp-content/uploads/2016/08/bg-splash2.png) center no-repeat;*/
+	background: #4cb74a url(/wp-content/uploads/2017/01/klzii-bkg-pattern-10.png) center no-repeat;
+	background-size: cover;
+}
+.bg-splash-orange {
+	/*background: url(/wp-content/uploads/2016/08/bg-splash3.png) center no-repeat;*/
+	background: #EC8B2B url(/wp-content/uploads/2017/01/klzii-bkg-pattern-10.png) center no-repeat;
+	background-size: cover;
+}
+.bg-blue {
+	background: url(/wp-content/uploads/2016/08/bg-blue.png) center no-repeat;
+	background-size: cover;
+}
+.bg-lBlue {
+	background: url(/wp-content/uploads/2016/08/bg-light-blue.png) center no-repeat;
+	background-size: cover;
+}
+.bg-lGreen {
+	background: url(/wp-content/uploads/2016/08/bg-light-green.png) center no-repeat;
+	background-size: cover;
+}
+.bg-pattern {
+	background-image: url(/wp-content/uploads/2016/08/geometric-overlay.png);
+	background-position: center center;
+	/* background-repeat: no-repeat;
+	background-size: cover; */
+}
+
+.icon-play {
+	display: inline-block;
+	background: url(/wp-content/uploads/2016/08/icons-7.png) center no-repeat;
+	background-size: cover;
+	height: 34px;
+	width: 34px;
+	margin-left: 10px;
+}
+
+.iconBox-text {
+	padding: 10px 0px;
+	.item {
+		display: inline-block;
+		width: 49.3%;
+		margin-left: 0.6%;
+		margin-bottom: 15px;
+		padding: 30px;
+		background-color: #ffffff;
+		vertical-align: top;
+		p:empty {
+			display: none;
+		}
+		p:last-of-type:not(:empty) {
+			margin:0px;
+		}
+		&:nth-of-type(2n + 1) {
+			margin-left: 0px;
+		}
+		&:before {
+			content: '';
+			clear: both;
+		}
+		&:after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+		.image {
+			float: left;
+			> span {
+				display: inline-block;
+				height: 100px;
+				width: 100px;
+				text-align: center;
+				border-radius: 50%;
+			}
+			.verticalAlign {
+				height: 100%;
+				width: 1px;
+				vertical-align: middle;
+				display: inline-block;
+			}
+		}
+		.text {
+			float: left;
+			width: 78%;
+			width: calc( 100% - 120px);
+			margin-left: 20px;
+		}
+	}
+}
+.coloredBox-line {
+	padding: 10px 0px;
+	.item {
+		display: inline-block;
+		width: 48%;
+		margin-left: 1.5%;
+		margin-bottom: 15px;
+		padding: 10px 35px 25px;
+		vertical-align: top;
+		p:empty {
+			display: none;
+		}
+		p:last-of-type:not(:empty) {
+			margin:0px;
+		}
+		&.violet {
+			border-left: 6px solid #a7429e;
+		}
+		&.darkGreen {
+			border-left: 6px solid #a7429e;
+		}
+		&.green {
+			border-left: 6px solid #56b940;
+		}
+		&.pink {
+			border-left: 6px solid #e54a5d;
+		}
+		&.orange {
+			border-left: 6px solid #ea7d10;
+		}
+		&.blue {
+			border-left: 6px solid #58bdeb;
+		}
+	}
+}
+.logoStrip {
+	text-align: center;
+	img {
+		display: inline-block;
+		margin: 10px 25px;
+		max-height: 46px;
+	}
+}
+.itemCollapse {
+	border: 1px solid #eaeaea;
+	margin-bottom: 25px;
+	.header {
+		padding: 14px 16px;
+		background-color: #eaeaea;
+		cursor: pointer;
+		h1,h2,h3,h4,h5 {
+			font-weight: 500;
+			margin-bottom: 0px;
+		}
+		h3,h4 {
+			font-size: 23px;
+		}
+		.fa {
+		    font-size: 20px;
+		    margin-right: 5px;
+		    vertical-align: middle;
+		}
+	}
+	.bottomCollapse {
+		padding: 15px;
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}
+.testimonialBox {
+	margin-bottom: 25px;
+	.header {
+		padding: 35px;
+		h1,h2,h3,h4,h5,h6 {
+			color: #ffffff;
+			text-align: center;
+			line-height: 1.4;
+			max-width: 650px;
+			margin: 0px auto;
+			&:before {
+			    content: '';
+			    background: url(/wp-content/uploads/2016/08/icon-left-quote.png) center no-repeat;
+			    background-size: cover;
+			    position: relative;
+			    display: inline-block;
+			    margin-right: 6px;
+			    bottom: -3px;
+			    width: 32px;
+			    height: 26px;
+			}
+			&:after {
+			    content: '';
+			    background: url(/wp-content/uploads/2016/08/icon-right-quote.png) center no-repeat;
+			    background-size: cover;
+			    display: inline-block;
+			    margin-left: 6px;
+    			margin-bottom: -10px;
+			    width: 32px;
+			    height: 26px;
+			}
+		}
+	}
+	.body {
+			padding: 20px;
+	}
+	&.violetBox {
+		border-bottom: 3px solid #a7429e;
+		.header {
+			background-color: #a7429e;
+		}
+		.body {
+			border: 1px solid #e4e4e4;
+		}
+	}
+	&.blueBox {
+		border-bottom: 3px solid #36a7da;
+		.header {
+			background-color: #36a7da;
+		}
+		.body {
+			border: 1px solid #e4e4e4;
+		}
+	}
+}
+.splashWhiteBox {
+	&:before {
+		content: '';
+		clear: both;
+	}
+	&:after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+	.item {
+		background-color: #ffffff;
+		width:24.7%;
+		margin-left: 0.35%;
+		padding: 20px;
+		padding-left: 9%;
+		float: left;
+		color: #333333;
+		font-size: 16px;
+		position: relative;
+		height: 175px;
+		p {
+			height: 130px;
+			margin-bottom: 0px;
+		}
+		.vAlign {
+			vertical-align: middle;
+			width: 99%;
+			display: inline-block;
+		}
+		.vAlignHelper {
+			height: 100%;
+			width: 1px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+		&:first-of-type {
+			margin-left: 0px;
+		}
+		&:before {
+			content: '';
+   			background: url(/wp-content/uploads/2016/08/check.png) center no-repeat;
+   			background-size: contain;
+		    height: 100%;
+		    width: 69px;
+		    position: absolute;
+		    left: 15px;
+		    top: 0px;
+		}
+	}
+}
+.testimonials {
+	.item {
+		margin-bottom: 25px;
+		border: 20px solid #e3f6ff;
+		position: relative;
+		&:before {
+			content:'';
+			background: url("/wp-content/uploads/2016/08/quote-blue.png") 0 0 no-repeat;
+			background-size: contain;
+			width: 75px;
+			height: 75px;
+			display: block;
+			top: -20px;
+			left: -20px;
+			position: absolute;
+		}
+		.text {
+			padding: 45px;
+			position: relative;
+			&:after {
+				content: '';
+				background: url("/wp-content/uploads/2016/08/bubble-tip.png") 0 0 no-repeat;
+				width: 43px;
+				height: 31px;
+				display: block;
+				bottom: -31px;
+				position: absolute;
+			}
+			p:last-of-type {
+				margin-bottom: 0px;
+			}
+		}
+		.author {
+			padding: 20px 80px 0px;
+			background-color: #e3f6ff;
+			p:last-of-type {
+				margin-bottom: 0px;
+			}
+		} 
+	}
+}
+.price {
+	&:before {
+		content: '';
+		clear: both;
+	}
+	&:after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+	.item {
+		/* width: 25%; */
+		width: 19.8%;
+		margin-left: 0.25%;
+		float: left;
+		&:first-of-type {
+			/* padding-top: 8px; */
+			margin-left: 0px;
+			.body {
+				ul {
+					text-align: left;
+				}
+				h4 {
+					color: #444444;
+				}
+			}
+		}
+		.headerWrap {
+			min-height: 210px;
+			position: relative;
+			&.popular {
+				&:before {
+					content: '';
+					background: url(/wp-content/uploads/2016/08/most-popular.png) center no-repeat;
+					background-size: contain;
+					position: absolute;
+					top: -16px;
+					right: 15px;
+					height: 60px;
+					width: 60px;
+					z-index: 1;
+				}
+			}
+		}
+		.header {
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+			min-height: 112px;
+			&.bgGray {
+				.text {
+					h2,h3,h4 {
+						color: #222222;
+					}
+				}
+			}
+			.text {
+				/* padding: 20px; */
+				padding: 10px;
+				text-align: center;
+				color: #ffffff;
+				h3,h4,h5 {
+					color: #ffffff;
+					font-size: 22px; 
+				}
+				h4 {
+					color: #484b4a;
+					font-style: italic;
+				}
+			}
+			.subHeader {
+				padding: 10px;
+				text-align: center;
+				font-size: 35px;
+				color: #fff;
+				text-shadow: #444 2px 2px 2px;
+				span.bottom {
+					font-size: 14px;
+					vertical-align: bottom;
+				}
+				span.top {
+					/* font-size: 14px; */
+					vertical-align: top;
+					padding-right: 5px;
+					display: inline-block;
+				}
+			}
+		}
+		.body {
+			/* padding: 20px; */
+			ul {
+				padding: 0px;
+				margin: 0px;
+				text-align: center;
+			}
+			li {
+				list-style-type: none;
+				padding: 5px 10px;
+				margin-bottom: 2px;
+				&.active {
+					background-color: rgba(130,130,130,0.1);
+				}
+				&:first-of-type,
+				&:nth-of-type(2) {
+					display: none;
+				}
+				.fa {
+					font-size: 20px;
+				}
+			}
+			h4 {
+				color: #ffffff;
+				font-size: 20px;
+			}
+		}
+		.button {
+			padding: 15px;
+		}
+	}
+}
+.splashCharacter {
+	text-align: center;
+	margin-top: -20px;
+}
+
+
+
+
+.review {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #e3f6ff;
+}
+
+.content {
+    background-color: #fff;
+    /* padding: 40px; */
+}
+
+.price {
+	font-size: 15px;	
+}
+
+.label li:nth-child(even) {
+	background-color: #dedede;
+}
+
+.label li:nth-child(odd) {
+	background-color: #efefef;
+}
+
+.senior li:nth-child(even) {
+	background-color: #cae8c8;
+}
+
+.senior li:nth-child(odd) {
+	background-color: #dbf1dc;
+}
+
+.core li:nth-child(even) {
+	background-color: #caecf9;
+}
+
+.core li:nth-child(odd) {
+	background-color: #afe3f6;
+}
+
+.junior li:nth-child(even) {
+	background-color: #fbe6d1;
+}
+
+.junior li:nth-child(odd) {
+	background-color: #ffdab4;
+}
+
+.yellow li:nth-child(even) {
+	background-color: #faf8c3;
+}
+
+.yellow li:nth-child(odd) {
+	background-color: #fdfad7;
+}
+
+.fw-section li {
+	color: #414141;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+}
+.cta-footer {
+	padding-bottom: 0 !important;
+	.first {
+		position: relative;
+		&:after {
+			    content: '';
+			    position: absolute;
+			    width: 500px;
+			    height: 300px;
+			    width: calc(100% - 20px);
+			    height: calc(100% - 15px);
+			    display: inline-block;
+			    background: url(/wp-content/uploads/2017/01/klzii-getstarted-1.png) left bottom no-repeat;
+			    bottom: 0;
+			    right: -110%;
+			    background-size: contain;
+		}
+	}
+}
