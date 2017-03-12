@@ -127,11 +127,16 @@ function enqueue_assets()
 	// Google CDN jQuery
 	wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', array(), null, false);
+	wp_enqueue_script('createjs', '//code.createjs.com/createjs-2015.11.26.min.js', array(), null, false);
+	wp_enqueue_script('player', '//player.vimeo.com/api/player.js', array(), null, false);
 
 	// BoostrapJS (responsive nav)
 	wp_enqueue_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), false, true );
 
 	wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'klzii_home', get_stylesheet_directory_uri() . '/js/klzii_home.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'klzii_home_banner_init', get_stylesheet_directory_uri() . '/js/klzii_home_banner_init.js', array( 'jquery' ), false, true );
+
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 }
 

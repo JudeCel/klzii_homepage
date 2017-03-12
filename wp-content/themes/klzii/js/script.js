@@ -38,6 +38,23 @@ function removeEmptyP() {
 
 
 $(document).ready(function(){
+    var player = new Vimeo.Player('video-content', {id: 190188043});
+    $('.btn.btn-video-watch').click(function(event){
+        event.preventDefault();
+        $('#video-content').css('display','block');
+        player.play();
+    });
+
+    init_home_page_main_banner();
+
+    function personaMaxHeightCalc(){
+        var maxHeight = 0;
+        $(".coloredBox .coloredBoxInner .bottom").each(function(){
+            if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+        });
+        $(".coloredBox .coloredBoxInner .bottom").height(maxHeight);
+    }
+
     /* For Equal Height */
     equalheight('.coloredBox-line .item, .iconBox-text .item');
     var windowW = $(window).width(),
@@ -65,6 +82,19 @@ $(document).ready(function(){
         }
     });
     /* End Of Equal Height */
+    $(window).resize(function() {
+        if(windowW >= 767){
+            personaMaxHeightCalc();
+        } else {
+            $(".coloredBox .coloredBoxInner .bottom").height('auto');
+        }
+    });
+
+    if(windowW >= 767){
+        personaMaxHeightCalc();
+    } else {
+        $(".coloredBox .coloredBoxInner .bottom").height('auto');
+    }
 
     removeEmptyP();
 
