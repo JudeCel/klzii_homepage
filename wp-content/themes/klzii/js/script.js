@@ -38,7 +38,7 @@ function removeEmptyP() {
 
 
 $(document).ready(function(){
-    var player = new Vimeo.Player('video-content', {id: 190188043});
+    var player = new Vimeo.Player('video-content', {id: 190188043,loop: true});
     $('.btn.btn-video-watch').click(function(event){
         event.preventDefault();
         $('#video-content').css('display','block');
@@ -52,7 +52,7 @@ $(document).ready(function(){
         $(".coloredBox .coloredBoxInner .bottom").each(function(){
             if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
         });
-        $(".coloredBox .coloredBoxInner .bottom").height(maxHeight);
+        $(".coloredBox .coloredBoxInner .bottom").height(maxHeight+76);
     }
 
     /* For Equal Height */

@@ -1690,6 +1690,7 @@ li.comment {
   background-color: #fff;
   vertical-align: top;
 }
+.iconBox-text .item h3 { word-wrap:break-word; }
 .iconBox-text .item p:empty {
   display: none;
 }
@@ -2253,7 +2254,9 @@ li.comment {
 .video-buttons { width:100%; text-align:center; position:absolute; bottom:50px; }
 .video-buttons .btn.btn-sneak-preview { float:inherit; }
 .btn.btn-sneak-preview, .btn.btn-video-watch { color:#e01a37; background-color: #fff; }
+.btn.btn-sneak-preview:hover , .btn.btn-video-watch:hover {  background-color: #f8f8f7; }
 .btn.btn-sneak-preview-large { color:#e01a37; background-color: #fff; }
+.btn.btn-sneak-preview-large:hover { background-color: #f8f8f7; }
 .video-buttons h1 { color:#fff; font-size:42px; }
 
 #video-content { width:100%; height:100%; position:absolute; display: none; }
@@ -2360,7 +2363,7 @@ li.comment {
   background-color: #119165;
 }
 .bgGreen {
-  background-color: #dbf1dc;
+  background-color: #bbd4bc;
 }
 .bgMdGreen {
   background-color: #72c46e;
@@ -2946,6 +2949,7 @@ i, .icon {
   }
 }
 @media only screen and (max-width: 1023px) {
+  .coloredBox .coloredBoxInner .bottom .btn { position: static; }
   .show-mobile {
     display: block;
   }
@@ -3427,8 +3431,10 @@ i, .icon {
     .site-footer .btn.btn-sneak-preview { margin-top:10px; }
 }
 @media only screen and (max-width: 465px) {
-
     .video-buttons h1 { font-size:18px; }
     .video-buttons { bottom:5px; }
     .btn.custom { font-size:16px; padding: 8px; }
+}
+@media only screen and (max-width: 1139px) {
+    .btn.btn-sneak-preview { margin-left:0; margin-top:5px; }
 }
