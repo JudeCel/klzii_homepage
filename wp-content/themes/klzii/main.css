@@ -1208,9 +1208,9 @@ li.comment {
 .breadcrumb a:hover, .breadcrumb a:focus {
   color: #444;
 }
-.header-menu { width:calc(100% - 372px); display: inline-block; text-align: right; line-height:48px; height:48px; }
+.header-menu { width:calc(100% - 386px); display: inline-block; text-align: right; line-height:48px; height:48px; }
 .header-menu a { margin-right:10px; text-decoration:none; }
-.header-menu-buttons { display: inline-block; width:368px;}
+.header-menu-buttons { display: inline-block; width:382px;}
 .genesis-nav-menu {
   clear: both;
   color: #999;
