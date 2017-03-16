@@ -3073,7 +3073,7 @@ i, .icon {
   .pull-left-desktop, .pull-right-desktop, .header-menu {
     float: none;
   }
-  .header-menu { width:auto; }
+  .header-menu { width:100%; text-align: center; }
   .nav-primary {
     background: #444;
   }
