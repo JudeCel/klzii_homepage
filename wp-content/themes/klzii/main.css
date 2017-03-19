@@ -786,11 +786,9 @@ button:hover, input[type="submit"]:hover, .btn:hover, button:focus, input[type="
   color: #fff;
 }
 .btn-green-o {
-  background-color: #54ad1f;
-
-  border-bottom: none;
-  color: #fff;
-  box-shadow: inset 0px -3px 0px #d6d6d6;
+  background-color: #fff;
+  color: #54ad1f;
+  border:2px solid #54ad1f;
   font-style: italic;
 }
 .btn-green-o:hover, .btn-green-o:focus {
@@ -921,6 +919,7 @@ button:hover, input[type="submit"]:hover, .btn:hover, button:focus, input[type="
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+.no-bold { font-weight: inherit; }
 .avatar {
   float: left;
 }
@@ -1159,6 +1158,7 @@ li.comment {
 .site-header .widget-area {
   float: right;
   width: 85%;
+  margin-top:18px;
 }
 .header-image .site-header .widget-area {
   padding: 40px 0;
@@ -1208,9 +1208,9 @@ li.comment {
 .breadcrumb a:hover, .breadcrumb a:focus {
   color: #444;
 }
-.header-menu { width:calc(100% - 386px); display: inline-block; text-align: right; line-height:48px; height:48px; }
+.header-menu { width:calc(100% - 387px); display: inline-block; text-align: right; line-height:48px; height:48px; }
 .header-menu a { margin-right:10px; text-decoration:none; }
-.header-menu-buttons { display: inline-block; width:382px;}
+.header-menu-buttons { display: inline-block; width:383px;}
 .genesis-nav-menu {
   clear: both;
   color: #999;
@@ -2956,6 +2956,7 @@ i, .icon {
   .hide-mobile {
     display: none;
   }
+    .site-header .widget-area {margin-top:0;}
   .content, .content-sidebar .content, .content-sidebar .content-sidebar-wrap, .content-sidebar-sidebar .content, .content-sidebar-sidebar .content-sidebar-wrap, .footer-widgets-1, .footer-widgets-2, .footer-widgets-3, .sidebar-content-sidebar .content, .sidebar-content-sidebar .content-sidebar-wrap, .sidebar-primary, .sidebar-secondary, .sidebar-sidebar-content .content, .sidebar-sidebar-content .content-sidebar-wrap, .site-header .widget-area, .site-inner, .title-area, .wrap, .footer-logo {
     width: auto;
     float: none;
@@ -3436,5 +3437,6 @@ i, .icon {
     .btn.custom { font-size:16px; padding: 8px; }
 }
 @media only screen and (max-width: 1139px) {
+
     .btn.btn-sneak-preview { margin-left:0; margin-top:5px; }
 }

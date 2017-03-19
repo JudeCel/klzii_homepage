@@ -47,51 +47,29 @@ $(document).ready(function(){
 
     init_home_page_main_banner();
 
-    function personaMaxHeightCalc(){
-        var maxHeight = 0;
+    var windowW = $(window).width();
+    var maxHeight = 0;
+    /* End Of Equal Height */
+    $(window).resize(function() {
+        windowW = $(window).width();
+        if(windowW <= 1023) {
+            $(".coloredBox .coloredBoxInner .bottom").height('auto');
+        } else {
+            maxHeight = 0;
+            $(".coloredBox .coloredBoxInner .bottom").each(function(){
+                if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+            });
+            $(".coloredBox .coloredBoxInner .bottom").height(maxHeight);
+        }
+    });
+
+    if(windowW >= 1023) {
+        maxHeight = 0;
         $(".coloredBox .coloredBoxInner .bottom").each(function(){
             if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
         });
-        $(".coloredBox .coloredBoxInner .bottom").height(maxHeight+76);
-    }
-
-    /* For Equal Height */
-    equalheight('.coloredBox-line .item, .iconBox-text .item');
-    var windowW = $(window).width(),
-        checker = 0;
-   /* var equalHeightEl1 = $('.coloredBox-line .item'),
-        equalHeightEl2 = $('.iconBox-text .item');*/
-    $(window).resize(function() {
-        windowW         = $(window).width();
-        var counter         = 0;
-        var counterLimit    = $('.price .item:first-of-type .body ul li').length + 1;
-        if( windowW <= 767 ){
-            /*equalHeightEl1.removeAttr('style');
-            equalHeightEl2.removeAttr('style');*/
-            $('.coloredBox-line .item, .iconBox-text .item, .price .item .body ul li').removeAttr('style');
-        }else if( windowW > 767){
-            equalheight('.coloredBox-line .item, .iconBox-text .item');
-            if(checker == 0){
-                checker = 1;
-                do {
-                    equalheight('.price .item .body ul li:nth-of-type('+counter+')');
-                    if(counter == (counterLimit - 1) ){ checker = 0; }
-                    counter++;
-                }while(counter < counterLimit);
-            }
-        }
-    });
-    /* End Of Equal Height */
-    $(window).resize(function() {
-        if(windowW >= 767){
-            personaMaxHeightCalc();
-        } else {
-            $(".coloredBox .coloredBoxInner .bottom").height('auto');
-        }
-    });
-
-    if(windowW >= 767){
-        personaMaxHeightCalc();
+        maxHeight = maxHeight + 30;
+        $(".coloredBox .coloredBoxInner .bottom").height(maxHeight);
     } else {
         $(".coloredBox .coloredBoxInner .bottom").height('auto');
     }
