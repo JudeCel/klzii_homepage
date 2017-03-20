@@ -318,6 +318,7 @@ strong {
   background-color: #333;
   color: #ddd;
 }
+.entry-content .bgLBlue .wrap-inverse .one-half img { width:70% ;}
 cite {
   font-style: normal;
 }
