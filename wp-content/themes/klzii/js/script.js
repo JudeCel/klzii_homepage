@@ -37,6 +37,7 @@ function removeEmptyP() {
 }
 
 
+
 $(document).ready(function(){
     var player = new Vimeo.Player('video-content', {id: 190188043,loop: true});
     $('.btn.btn-video-watch').click(function(event){
@@ -51,26 +52,33 @@ $(document).ready(function(){
     var maxHeight = 0;
     /* End Of Equal Height */
     $(window).resize(function() {
-        windowW = $(window).width();
-        if(windowW <= 1023) {
-            $(".coloredBox .coloredBoxInner .bottom").height('auto');
-        } else {
+        if($(window).width() >= 1139) {
+            maxHeight = 0;
+            $(".coloredBox .coloredBoxInner .bottom").each(function(){
+                if ($(this).height() > maxHeight) { maxHeight = $(this); }
+            });
+            $(".coloredBox .coloredBoxInner .bottom").height(maxHeight.height());
+        } else
+        if($(window).width() >= 1024) {
             maxHeight = 0;
             $(".coloredBox .coloredBoxInner .bottom").each(function(){
                 if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
             });
             $(".coloredBox .coloredBoxInner .bottom").height(maxHeight);
+        } else if(windowW >= 756) {
+            $(".coloredBox .coloredBoxInner .bottom").height('auto');
         }
     });
 
-    if(windowW >= 1023) {
+
+    if(windowW >= 1024) {
         maxHeight = 0;
         $(".coloredBox .coloredBoxInner .bottom").each(function(){
             if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
         });
-        maxHeight = maxHeight + 30;
+        maxHeight = maxHeight + 86;
         $(".coloredBox .coloredBoxInner .bottom").height(maxHeight);
-    } else {
+    } else if(windowW >= 756) {
         $(".coloredBox .coloredBoxInner .bottom").height('auto');
     }
 
