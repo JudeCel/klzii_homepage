@@ -39,15 +39,6 @@ function removeEmptyP() {
 
 
 $(document).ready(function(){
-    var player = new Vimeo.Player('video-content', {id: 190188043,loop: true});
-    $('.btn.btn-video-watch').click(function(event){
-        event.preventDefault();
-        $('#video-content').css('display','block');
-        player.play();
-    });
-
-    init_home_page_main_banner();
-
     var windowW = $(window).width();
     var maxHeight = 0;
     /* End Of Equal Height */
