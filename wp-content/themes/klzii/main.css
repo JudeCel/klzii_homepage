@@ -3365,7 +3365,6 @@ i, .icon {
   }
   .price .item .body li:first-of-type, .price .item .body li:nth-of-type(2) {
     display: inline-block;
-    color: #fff;
     font-size: 18px;
     padding: 0px;
   }
