@@ -729,7 +729,6 @@ button:hover, input[type="submit"]:hover, .btn:hover, button:focus, input[type="
 .btn-pink {
   background-color: #e2203d;
   color: #fff;
-  box-shadow: inset 0px -3px 0px #cbd1d0;
   text-shadow: -2px 0px rgba(10, 10, 10, 0.2);
   font-style: italic;
 }
@@ -791,6 +790,7 @@ button:hover, input[type="submit"]:hover, .btn:hover, button:focus, input[type="
   color: #54ad1f;
   border:2px solid #54ad1f;
   font-style: italic;
+	padding: 13px 23px;
 }
 .btn-green-o:hover, .btn-green-o:focus {
   background-color: #56b940;
