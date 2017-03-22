@@ -729,7 +729,6 @@ button:hover, input[type="submit"]:hover, .btn:hover, button:focus, input[type="
 .btn-pink {
   background-color: #e2203d;
   color: #fff;
-  box-shadow: inset 0px -3px 0px #cbd1d0;
   text-shadow: -2px 0px rgba(10, 10, 10, 0.2);
   font-style: italic;
 }
