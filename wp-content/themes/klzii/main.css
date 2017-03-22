@@ -791,6 +791,7 @@ button:hover, input[type="submit"]:hover, .btn:hover, button:focus, input[type="
   color: #54ad1f;
   border:2px solid #54ad1f;
   font-style: italic;
+	padding: 13px 23px;
 }
 .btn-green-o:hover, .btn-green-o:focus {
   background-color: #56b940;
