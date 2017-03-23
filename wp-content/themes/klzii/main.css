@@ -429,7 +429,7 @@ body.nowrap .entry {
   margin-left: 2.5641%;
 }
 .one-half, .three-sixths, .two-fourths {
-  width: 48.71795%;
+  width: 46.71795%;
 }
 .one-third, .two-sixths {
   width: 31.62393%;
@@ -2254,7 +2254,7 @@ li.comment {
 @media only screen and (min-width: 767px) {
     .btn.btn-sneak-preview { margin-left:5px;}
     .footer-menu { margin-top:0px; }
-    .site-footer .one-fourth.padT10 { width:31%; }
+    .site-footer .one-fourth.padT10 { width:33%; }
     .site-footer .one-fourth.padT10 .btn.btn-pink{ float:left; }
     .site-footer .one-fourth.first { width:15%; }
     .btn.btn-sneak-preview { float:left; margin-left:10px; }
