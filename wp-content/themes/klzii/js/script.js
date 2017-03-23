@@ -68,7 +68,9 @@ $(document).ready(function(){
 
     $('.start-free-trial-popup').click(function(e){
         e.preventDefault();
-        $('#input_7_6').val($(this).attr('data-plan'));
+        if ($(this).attr('data-plan')) {
+            $('#input_7_6').val($(this).attr('data-plan'));
+        }
         var TopPosition = $(document).scrollTop();
         if(windowW <= 758) {
             TopPosition = TopPosition - 180;
