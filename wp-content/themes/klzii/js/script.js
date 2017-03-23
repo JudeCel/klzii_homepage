@@ -61,6 +61,15 @@ $(document).ready(function(){
         }
     });
 
+    $('.overlay-box .close-box').click(function(){
+        $('.overlay-box').css('display','none');
+    });
+
+
+    $('.start-free-trial-popup').click(function(e){
+        e.preventDefault();
+        $('.overlay-box').css('display','block');
+    });
 
     if(windowW >= 1024) {
         maxHeight = 0;

@@ -1,9 +1,7 @@
 <?php
 
-////Gravity form: Free Trial - New,ID:7
-//gravity_form( 7, $display_title = true, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex, $echo = true );
-//
-//
+
+
 //require 'chargeBeelib/ChargeBee.php';
 //ChargeBee_Environment::configure("kliikotst-test","test_M84JneCGcdmd5Zp8jpDqLtH9twyR9EWUr");
 //$all = ChargeBee_Plan::all(array(
@@ -11,9 +9,10 @@
 //    "trialPeriod[isNot]" => 14,
 //    "trialPeriodUnit[is]" => "day",
 //    "status[is]" => "active"));
+//    var_dump($all);die();
 //foreach($all as $entry){
 //    $plan = $entry->plan();
-//    var_dump($plan);
+//    var_dump($plan);die();
 //}
 
 function mysql_escape_string($string){return mysqli_escape_string($string);}
