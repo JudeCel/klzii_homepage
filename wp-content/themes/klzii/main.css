@@ -1232,7 +1232,7 @@ li.comment {
 .overlay-box .start-your-free-trial .modal-box .gfield.gfield_error.gfield_contains_required label.gfield_label { margin-top:0;}
 .overlay-box .overlay { z-index:150; position: absolute; left:0; top:0; width:100%; height:100%; opacity: 0.8; background-color: #000; }
 .overlay-box .close-box { position: absolute; right:40px; top:20px; }
-.overlay-box .close-box i { color:#fff; font-size:24; cursor: pointer; }
+.overlay-box .close-box i { color:#fff; font-size:24px; cursor: pointer; }
 
 
 .header-menu { width:calc(100% - 424px); display: inline-block; text-align: right; line-height:48px; height:48px; }
