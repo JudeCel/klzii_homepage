@@ -36,7 +36,13 @@ function removeEmptyP() {
     }
 }
 
-
+var TopPosition = $(document).scrollTop();
+$('.start-free-trial-popup').click(function(e){
+    e.preventDefault();
+    $('#input_7_6').val($(this).attr('data-plan'));
+    $('.overlay-box .start-your-free-trial').css('top',TopPosition);
+    $('.overlay-box').css('display','block');
+});
 
 $(document).ready(function(){
     var windowW = $(window).width();
@@ -66,10 +72,6 @@ $(document).ready(function(){
     });
 
 
-    $('.start-free-trial-popup').click(function(e){
-        e.preventDefault();
-        $('.overlay-box').css('display','block');
-    });
 
     if(windowW >= 1024) {
         maxHeight = 0;

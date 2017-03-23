@@ -39,7 +39,7 @@ do_action( 'genesis_before_header' );
             <div class="close-box"><i class="fa fa-times fa-3x" aria-hidden="true"></i></div>
             <?php
             //Gravity form: Free Trial - New,ID:7
-            gravity_form(7, $display_title = true, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex, $echo = true);
+            gravity_form(7, $display_title = true, $display_description = true, $display_inactive = false, $field_values = null, $ajax = true, $tabindex, $echo = true);
             ?>
             <div class="klzii-img"></div>
         </div>
