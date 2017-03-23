@@ -827,6 +827,13 @@ button:hover, input[type="submit"]:hover, .btn:hover, button:focus, input[type="
   box-shadow: none;
   color: #fff;
 }
+
+.btn-left-space {
+
+margin-left:10px; 
+	
+}
+
 .btn-white {
   background-color: #fff;
   color: #666;
