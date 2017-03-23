@@ -1209,9 +1209,25 @@ li.comment {
 .breadcrumb a:hover, .breadcrumb a:focus {
   color: #444;
 }
+
+.overlay-box { display:none; width:100%; height:100%; position:absolute; }
+.overlay-box .start-your-free-trial { left:calc(50% - 315px); top:15%; position: fixed; z-index:200; background: url(/wp-content/uploads/2016/08/modal-bg-klzii.jpg) center no-repeat; }
+.overlay-box .start-your-free-trial .modal-box { padding:40px; max-width:940px; min-height:715px;  background: url(/wp-content/uploads/2016/08/klzii-model-bottom-img.png) center bottom no-repeat;  }
+.overlay-box .start-your-free-trial .modal-box .klzii-img { text-align: center; width:100%; margin:0 auto; height:224px; }
+.overlay-box .start-your-free-trial .modal-box .gform_title { font-weight: inherit; color:#fff; font-size:24px; }
+.overlay-box .start-your-free-trial .modal-box .gfield_label { color:#fff; font-size:16px; font-weight: inherit; }
+.overlay-box .start-your-free-trial .modal-box .gform_button.button { font-weight:inherit; width:100%; color:#fff; font-size:20px; height:53px; border-bottom:2px solid #963c40; background-color: #e54761; border-radius: 0; }
+.overlay-box .start-your-free-trial .modal-box .ginput_container input,
+.overlay-box .start-your-free-trial .modal-box .ginput_container select { height:42px; border-radius: 0; }
+.overlay-box .overlay { z-index:150; position: absolute; left:0; top:0; width:100%; height:100%; opacity: 0.8; background-color: #000; }
+.overlay-box .close-box { text-align: right; }
+.overlay-box .close-box i { color:#fff; font-size:24; cursor: pointer; }
+
+
 .header-menu { width:calc(100% - 424px); display: inline-block; text-align: right; line-height:48px; height:48px; }
 .header-menu a { margin-right:10px; text-decoration:none; }
 .header-menu-buttons { display: inline-block; width:420px;}
+
 .genesis-nav-menu {
   clear: both;
   color: #999;
