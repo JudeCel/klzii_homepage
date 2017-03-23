@@ -73,7 +73,7 @@ $(document).ready(function(){
         }
         var TopPosition = $(document).scrollTop();
         if(windowW <= 758) {
-            TopPosition = TopPosition - 180;
+            TopPosition = TopPosition - 50;
         }
         $('.overlay-box .start-your-free-trial').css('top',TopPosition);
         $('.overlay-box').css('display','block');
