@@ -318,7 +318,7 @@ strong {
   background-color: #333;
   color: #ddd;
 }
-.entry-content .bgLBlue .wrap-inverse .one-half img { width:70% ;}
+
 cite {
   font-style: normal;
 }
@@ -2948,7 +2948,11 @@ i, .icon {
 .page-id-371 #text-13 .splashForm, .page-id-371 #text-13 .splashCharacter {
   display: block !important;
 }
+@media only screen and (min-width: 1139px) {
+    .entry-content .bgLBlue .wrap-inverse .one-half img { width:53% ;}
+}
 @media only screen and (max-width: 1139px) {
+
   .site-inner, .wrap {
     max-width: 960px;
   }
