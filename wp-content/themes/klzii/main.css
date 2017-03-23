@@ -2248,10 +2248,6 @@ li.comment {
 .site-footer p {
   margin-bottom: 0;
 }
-.footer-top-padding50{
-  padding: 50px 0;
-  padding: 5rem 0;
-}
 
 @media only screen and (min-width: 767px) {
     .btn.btn-sneak-preview { margin-left:5px;}
