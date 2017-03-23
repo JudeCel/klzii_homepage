@@ -1223,7 +1223,7 @@ li.comment {
 .overlay-box .start-your-free-trial .modal-box .klzii-img { text-align: center; width:100%; margin:0 auto; height:179px; }
 .overlay-box .start-your-free-trial .modal-box .gform_title { font-weight: inherit; color:#fff; font-size:24px; }
 .overlay-box .start-your-free-trial .modal-box .gfield_label { color:#fff; font-size:16px; font-weight: inherit; }
-.overlay-box .start-your-free-trial .modal-box .gform_button.button { font-weight:inherit; width:100%; color:#fff; font-size:20px; height:53px; border-bottom:2px solid #963c40; background-color: #e54761; border-radius: 0; }
+.overlay-box .start-your-free-trial .modal-box .gform_button.button { font-weight:inherit; width:97%; color:#fff; font-size:20px; height:53px; border-bottom:2px solid #963c40; background-color: #e54761; border-radius: 0; }
 .overlay-box .start-your-free-trial .modal-box .ginput_container input,
 .overlay-box .start-your-free-trial .modal-box .ginput_container select { height:42px; border-radius: 0; }
 .overlay-box .overlay { z-index:150; position: absolute; left:0; top:0; width:100%; height:100%; opacity: 0.8; background-color: #000; }
