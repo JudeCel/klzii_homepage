@@ -3487,6 +3487,8 @@ i, .icon {
     text-align: center;
     height: 40px;
     border-radius: 20px;
+    margin-left: 10px;
+	
 }
 
 .widget .fa.fa-twitter {
@@ -3498,10 +3500,7 @@ i, .icon {
     width: 40px;
     text-align: center;
     height: 40px;
-    border-radius: 20px;
-    margin-left: 10px;
-	margin-right: 10px;
- 
+    border-radius: 20px; 
 	
 }
 
