@@ -3499,6 +3499,8 @@ i, .icon {
     text-align: center;
     height: 40px;
     border-radius: 20px;
+    margin-left: 10px;
+	
 }
 
 
@@ -3512,4 +3514,6 @@ i, .icon {
     text-align: center;
     height: 40px;
     border-radius: 20px;
+    margin-left: 10px;
+	
 }
