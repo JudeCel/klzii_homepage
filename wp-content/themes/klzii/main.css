@@ -1226,7 +1226,7 @@ li.comment {
 
 .header-menu { width:calc(100% - 424px); display: inline-block; text-align: right; line-height:48px; height:48px; }
 .header-menu a { margin-right:10px; text-decoration:none; }
-.header-menu-buttons { display: inline-block; width:420px;}
+.header-menu-buttons { display: inline-block; max-width:420px;}
 
 .genesis-nav-menu {
   clear: both;
