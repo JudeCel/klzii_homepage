@@ -3488,3 +3488,15 @@ i, .icon {
     height: 40px;
     border-radius: 20px;
 }
+
+.widget .fa.fa-twitter {
+	
+    background: #4E71A8;
+    color: #1da1f2;
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    border-radius: 20px;
+}
