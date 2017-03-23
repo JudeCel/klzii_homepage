@@ -41,7 +41,6 @@ do_action( 'genesis_before_header' );
             //Gravity form: Free Trial - New,ID:7
             gravity_form(7, $display_title = true, $display_description = true, $display_inactive = false, $field_values = null, $ajax = true, $tabindex, $echo = true);
             ?>
-            <div class="klzii-img"></div>
         </div>
     </div>
     <div class="overlay"></div>

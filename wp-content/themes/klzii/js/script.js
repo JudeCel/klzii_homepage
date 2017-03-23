@@ -36,13 +36,8 @@ function removeEmptyP() {
     }
 }
 
-var TopPosition = $(document).scrollTop();
-$('.start-free-trial-popup').click(function(e){
-    e.preventDefault();
-    $('#input_7_6').val($(this).attr('data-plan'));
-    $('.overlay-box .start-your-free-trial').css('top',TopPosition);
-    $('.overlay-box').css('display','block');
-});
+
+
 
 $(document).ready(function(){
     var windowW = $(window).width();
@@ -67,11 +62,20 @@ $(document).ready(function(){
         }
     });
 
-    $('.overlay-box .close-box').click(function(){
+    $('.overlay-box .close-box,.overlay-box .overlay').click(function(){
         $('.overlay-box').css('display','none');
     });
 
-
+    $('.start-free-trial-popup').click(function(e){
+        e.preventDefault();
+        $('#input_7_6').val($(this).attr('data-plan'));
+        var TopPosition = $(document).scrollTop();
+        if(windowW <= 758) {
+            TopPosition = TopPosition - 180;
+        }
+        $('.overlay-box .start-your-free-trial').css('top',TopPosition);
+        $('.overlay-box').css('display','block');
+    });
 
     if(windowW >= 1024) {
         maxHeight = 0;

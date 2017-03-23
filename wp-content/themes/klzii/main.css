@@ -1218,10 +1218,10 @@ li.comment {
 }
 
 .overlay-box { display:none; width:100%; height:100%; position:absolute; }
-.overlay-box .start-your-free-trial { left:calc(50% - 315px); top:15%; position: absolute; z-index:200; background: url(/wp-content/uploads/2016/08/modal-bg-klzii.jpg) 0 0 no-repeat; }
+.overlay-box .start-your-free-trial { z-index: 200; left:calc(50% - 315px); top:15%; position: absolute; z-index:200; background: url(/wp-content/uploads/2016/08/modal-bg-klzii.jpg) 0 0 no-repeat; }
 .overlay-box .start-your-free-trial .modal-box { padding:40px; max-width:940px; min-height:715px;  background: url(/wp-content/uploads/2016/08/klzii-model-bottom-img.png) center bottom no-repeat;  }
 .overlay-box .start-your-free-trial .modal-box .klzii-img { text-align: center; width:100%; margin:0 auto; height:179px; }
-.overlay-box .start-your-free-trial .modal-box .gform_title { font-weight: inherit; color:#fff; font-size:24px; }
+.overlay-box .start-your-free-trial .modal-box .gform_title { margin-top:20px; font-weight: inherit; color:#fff; font-size:24px; }
 .overlay-box .start-your-free-trial .modal-box .gfield_label { color:#fff; font-size:16px; font-weight: inherit; }
 .overlay-box .start-your-free-trial .modal-box .gform_button.button { font-weight:inherit; width:97%; color:#fff; font-size:20px; height:53px; border-bottom:2px solid #963c40; background-color: #e54761; border-radius: 0; }
 .overlay-box .start-your-free-trial .modal-box .ginput_container input,
@@ -1231,7 +1231,7 @@ li.comment {
 .overlay-box .start-your-free-trial .modal-box .validation_message { padding-right:5px; position: absolute;right:0; top:10px; text-align: right; padding-top:0; padding-bottom: 0; margin-bottom:0; }
 .overlay-box .start-your-free-trial .modal-box .gfield.gfield_error.gfield_contains_required label.gfield_label { margin-top:0;}
 .overlay-box .overlay { z-index:150; position: absolute; left:0; top:0; width:100%; height:100%; opacity: 0.8; background-color: #000; }
-.overlay-box .close-box { text-align: right; }
+.overlay-box .close-box { position: absolute; right:40px; top:20px; }
 .overlay-box .close-box i { color:#fff; font-size:24; cursor: pointer; }
 
 
@@ -3150,6 +3150,11 @@ i, .icon {
   }
 }
 @media only screen and (max-width: 767px) {
+    .overlay-box .start-your-free-trial { top:5%; }
+    .overlay-box .start-your-free-trial .modal-box {
+        max-width:767px;
+        height:auto;
+    }
   .video-buttons h1 { font-size:32px; }
   .five-sixths, .four-sixths, .one-fourth, .one-half, .one-sixth, .one-third, .three-fourths, .three-sixths, .two-fourths, .two-sixths, .two-thirds, .wrap-inverse .five-sixths, .wrap-inverse .four-sixths, .wrap-inverse .one-fourth, .wrap-inverse .one-half, .wrap-inverse .one-sixth, .wrap-inverse .one-third, .wrap-inverse .three-fourths, .wrap-inverse .three-sixths, .wrap-inverse .two-fourths, .wrap-inverse .two-sixths, .wrap-inverse .two-thirds {
     float: none;
@@ -3468,6 +3473,9 @@ i, .icon {
 @media only screen and (max-width: 359px) {
     .site-header .widget-wrap .btn.btn-pink { margin-top:10px; }
     .site-footer .btn.btn-sneak-preview { margin-top:10px; }
+}
+@media only screen and (max-width: 646px) {
+    .overlay-box .start-your-free-trial {left:0; top:5%; }
 }
 @media only screen and (max-width: 465px) {
     .video-buttons h1 { font-size:18px; }
