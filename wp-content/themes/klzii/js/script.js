@@ -72,9 +72,9 @@ $(document).ready(function(){
         if ($(this).attr('data-plan')) {
             $('#input_7_6').val($(this).attr('data-plan'));
         }
-        screenTop = $(document).scrollTop();
+        var screenTop = $(this).scrollTop();
         if(windowW <= 758) {
-            screenTop = screenTop - 180;
+            screenTop = screenTop - 50;
         }
         $('.overlay-box .start-your-free-trial').css('top',screenTop);
         $('.overlay-box').css('display','block');
