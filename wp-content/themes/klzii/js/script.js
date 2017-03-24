@@ -40,12 +40,11 @@ function removeEmptyP() {
 
 
 $(document).ready(function(){
-    var screenTop = $(document).scrollTop();
     var windowW = $(window).width();
     var maxHeight = 0;
     /* End Of Equal Height */
     $(window).resize(function() {
-        screenTop = $(document).scrollTop();
+
         if($(window).width() >= 1139) {
             maxHeight = 0;
             $(".coloredBox .coloredBoxInner .bottom").each(function(){
@@ -73,9 +72,9 @@ $(document).ready(function(){
         if ($(this).attr('data-plan')) {
             $('#input_7_6').val($(this).attr('data-plan'));
         }
-        var TopPosition = $(document).scrollTop();
+        screenTop = $(document).scrollTop();
         if(windowW <= 758) {
-            TopPosition = TopPosition - 180;
+            screenTop = screenTop - 180;
         }
         $('.overlay-box .start-your-free-trial').css('top',screenTop);
         $('.overlay-box').css('display','block');
