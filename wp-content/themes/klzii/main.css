@@ -830,8 +830,8 @@ button:hover, input[type="submit"]:hover, .btn:hover, button:focus, input[type="
 
 .btn-left-space {
 
-margin-left:10px; 
-	
+margin-left:10px;
+
 }
 
 .btn-white {
@@ -3504,11 +3504,11 @@ i, .icon {
     height: 40px;
     border-radius: 20px;
     margin-left: 10px;
-	
+
 }
 
 .widget .fa.fa-twitter {
-	
+
     background: #1da1f2;
     color: #fff;
     padding: 10px;
@@ -3516,13 +3516,13 @@ i, .icon {
     width: 40px;
     text-align: center;
     height: 40px;
-    border-radius: 20px; 
-	
+    border-radius: 20px;
+
 }
 
 
 .widget .fa.fa-linkedin-square {
-	
+
     background: #2f81a9;
     color: #fff;
     padding: 10px;
@@ -3532,5 +3532,34 @@ i, .icon {
     height: 40px;
     border-radius: 20px;
     margin-left: 10px;
-	
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+  #who-we-help .collapse1023 {
+    display: table !important;
+  }
+  .coloredBox {
+    display: table-cell;
+    padding: 0 5px;
+    width: 20%;
+    height:100%;
+  }
+  .coloredBoxInner {
+    height: calc(100% + 20px) !important;
+    display: flex;
+    flex-direction: column;
+   -moz-box-sizing: border-box;
+  }
+  .bottom {
+    height: inherit !important;
+    order: 2;
+  }
+  .bottom .btn {
+    bottom: 0 !important;
+  }
+  .top {
+    order: 1;
+  }
 }
