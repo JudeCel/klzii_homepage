@@ -637,3 +637,13 @@
     }
   }
 }
+
+@media (max-device-width: 767px) and (orientation: portrait) {
+  .widget-wrap .textwidget .header-menu-buttons {
+    line-height: 0;
+    a {
+      display: block;
+      margin: 5px 5px;
+    }
+  }
+}
