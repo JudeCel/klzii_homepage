@@ -33,6 +33,7 @@ genesis_markup( array(
 do_action( 'genesis_before_header' );
 
 ?>
+
 <div class="overlay-box">
     <div class="start-your-free-trial">
         <div class="modal-box">
@@ -45,11 +46,17 @@ do_action( 'genesis_before_header' );
     </div>
     <div class="overlay"></div>
 </div>
-<?php
 
+<?php
 do_action( 'genesis_header' );
 //do_action( 'genesis_after_header' );
+?>
 
+<?php if ( is_active_sidebar( 'header-video-widget' ) ) : ?>
+    <?php dynamic_sidebar( 'header-video-widget' ); ?>
+<?php endif; ?>
+
+<?php
 genesis_markup( array(
 	'open'   => '<div %s>',
 	'context' => 'site-inner',
