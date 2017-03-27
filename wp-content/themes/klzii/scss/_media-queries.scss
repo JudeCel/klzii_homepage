@@ -585,23 +585,33 @@
 @media only screen and (min-width: 1024px) {
   #who-we-help {
     .collapse1023 {
-      display: table !important;
+      display: -webkit-flex !important;
+      display: -moz-flex !important;
+      display: -ms-flexbox!important;
+      display: flex !important;
+      align-items: stretch;
+      min-height: 100%;
+      overflow: hidden;
     }
     .coloredBox {
-      display: table-cell;
+      display: -webkit-flex !important;
+      display: -moz-flex !important;
+      display: -ms-flexbox!important;
+      display: flex !important;
+
+      flex: 1;
       padding: 0 5px;
-      width: 20%;
-      height:100%;
+      height:auto !important;
+      flex-direction: column;
     }
     .coloredBoxInner {
-      height: calc(100% + 20px) !important;
-      display: flex;
-      flex-direction: column;
-     -moz-box-sizing: border-box;
+     flex: 1;
      position: relative;
+     margin-bottom: 0 !important;
     }
     .bottom {
-      height: inherit !important;
+      height: auto !important;
+      padding-bottom: 80px;
       order: 2;
     }
     .bottom .btn {
