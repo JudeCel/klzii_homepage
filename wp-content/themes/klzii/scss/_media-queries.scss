@@ -1,7 +1,74 @@
 //
 // Media Queries
 // --------------------------------------------------
+@media only screen and (min-width: 767px) {
+  .btn.btn-sneak-preview {
+    margin-left: 5px;
+  }
+  .footer-menu {
+    margin-top: 0px;
+  }
+  .site-footer .one-fourth {
+    &.padT10 {
+      width: 33%;
+      .btn.btn-pink {
+        float: left;
+      }
+    }
+    &.first {
+      width: 15%;
+    }
+  }
+  .btn.btn-sneak-preview {
+    float: left;
+    margin-left: 10px;
+  }
+  .site-footer .footer-menu a {
+    padding: 5px;
+  }
+}
 
+@media only screen and (min-width: 1139px) {
+  .entry-content .bgLBlue .wrap-inverse .one-half img {
+    width: 53%;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .site-header .widget-wrap .btn.btn-pink, .site-footer .btn.btn-sneak-preview {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 646px) {
+  .overlay-box .start-your-free-trial {
+    left: 0;
+    top: 5%;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  .video-buttons {
+    h1 {
+      font-size: 18px;
+    }
+    bottom: 5px;
+  }
+  .btn.custom {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 1139px) {
+  .coloredBox .coloredBoxInner .top .text {
+    min-height: 150px;
+  }
+  .btn.btn-sneak-preview {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
 @media only screen and (max-width: 1139px) {
 
 	.site-inner,
@@ -48,6 +115,14 @@
 }
 
 @media only screen and (max-width: 1023px) {
+    .site-header .widget-area {
+      margin-top: 0;
+    }
+
+    .coloredBox .coloredBoxInner .bottom .btn {
+      position: static;
+    }
+    .header-menu { width:100%; text-align: center; }
 	.show-mobile { display: block; }
 	.hide-mobile { display: none; }
 
@@ -237,7 +312,8 @@
 	}
 	
 	.pull-left-desktop,
-	.pull-right-desktop {
+	.pull-right-desktop,
+    .header-menu {
 		float: none;
 	}
 	.nav-primary {
@@ -288,7 +364,17 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .overlay-box .start-your-free-trial {
+      top: 5%;
+      .modal-box {
+        max-width: 767px;
+        height: auto;
+      }
+    }
 
+    .video-buttons h1 {
+      font-size: 32px;
+    }
 	.five-sixths,
 	.four-sixths,
 	.one-fourth,
@@ -508,7 +594,6 @@
 					&:first-of-type,
 					&:nth-of-type(2) {
 						display: inline-block;
-						color: #ffffff;
 						font-size: 18px;
 						padding: 0px;
 						p {

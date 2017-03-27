@@ -87,13 +87,126 @@
 }
 
 .site-header .widget-area {
-	float: right;
-	width: 85%;
+  float: right;
+  width: 85%;
+  margin-top:18px;
 }
 
 .header-image .site-header .widget-area {
 	padding: 40px 0;
 	padding: 4rem 0;
+}
+.overlay-box {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  .start-your-free-trial {
+    z-index: 200;
+    left: calc(50% - 315px);
+    top: 15%;
+    position: absolute;
+    z-index: 200;
+    background: url(/wp-content/uploads/2016/08/modal-bg-klzii.jpg) 0 0 no-repeat;
+    .modal-box {
+      padding: 40px;
+      max-width: 940px;
+      min-height: 715px;
+      background: url(/wp-content/uploads/2016/08/klzii-model-bottom-img.png) center bottom no-repeat;
+      .klzii-img {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 179px;
+      }
+      .gform_title {
+        margin-top: 20px;
+        font-weight: inherit;
+        color: #fff;
+        font-size: 24px;
+      }
+      .gfield_label {
+        color: #fff;
+        font-size: 16px;
+        font-weight: inherit;
+      }
+      .gform_button.button {
+        font-weight: inherit;
+        width: 97%;
+        color: #fff;
+        font-size: 20px;
+        height: 53px;
+        border-bottom: 2px solid #963c40;
+        background-color: #e54761;
+        border-radius: 0;
+      }
+      .ginput_container {
+        input, select {
+          height: 42px;
+          border-radius: 0;
+        }
+      }
+      .gform_body ul > li {
+        position: relative;
+      }
+      .validation_error {
+        border: none;
+        margin-bottom: 0;
+        font-size: 16px;
+        padding: 3px 0;
+      }
+      .validation_message {
+        padding-right: 5px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        text-align: right;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .gfield.gfield_error.gfield_contains_required label.gfield_label {
+        margin-top: 0;
+      }
+    }
+  }
+  .overlay {
+    z-index: 150;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-color: #000;
+  }
+  .close-box {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    i {
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
+.header-menu {
+  width: calc(100% - 424px);
+  display: inline-block;
+  text-align: right;
+  line-height: 48px;
+  height: 48px;
+  a {
+    margin-right: 10px;
+    text-decoration: none;
+  }
+}
+
+.header-menu-buttons {
+  display: inline-block;
+  max-width: 420px;
 }
 
 .site-header .search-form {
