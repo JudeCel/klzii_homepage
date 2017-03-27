@@ -36,15 +36,11 @@ function removeEmptyP() {
     }
 }
 
-
-
-
 $(document).ready(function(){
     var windowW = $(window).width();
     var maxHeight = 0;
     /* End Of Equal Height */
     $(window).resize(function() {
-
         if($(window).width() >= 1139) {
             maxHeight = 0;
             $(".coloredBox .coloredBoxInner .bottom").each(function(){
