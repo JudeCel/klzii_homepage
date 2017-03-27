@@ -84,6 +84,7 @@
 
 .widget-area {
 	word-wrap: break-word;
+	text-align: right;
 }
 
 .site-header .widget-area {
@@ -141,4 +142,8 @@
 			color: #444444;
 		}
 	}
+}
+
+.header-menu, .header-menu-buttons {
+	display: inline-block;
 }
