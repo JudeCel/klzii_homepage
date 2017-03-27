@@ -751,5 +751,28 @@
    width: 40px;
    height: 40px;
    border-radius: 20px;
-   margin-left: 10px;
+	 text-align: center;
+}
+
+.widget .fa.fa-twitter {
+	background: #1da1f2;
+	color: #fff;
+	padding: 10px;
+	font-size: 20px;
+	width: 40px;
+	text-align: center;
+	height: 40px;
+	border-radius: 20px;
+}
+
+.widget .fa.fa-linkedin-square {
+	background: #2f81a9;
+	color: #fff;
+	padding: 10px;
+	font-size: 20px;
+	width: 40px;
+	text-align: center;
+	height: 40px;
+	border-radius: 20px;
+	margin-left: 10px;
 }
