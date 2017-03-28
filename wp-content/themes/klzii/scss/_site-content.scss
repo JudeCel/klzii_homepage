@@ -177,31 +177,31 @@
                 bottom:20px;
 			}
 		}
-		&.blue { 
+		&.blue {
 			.top { background-color: #58bdeb; }
 			.bottom { background-color: #e3f6ff; }
 		}
-		&.violet { 
+		&.violet {
 			.top { background-color: #a7429e; }
 			.bottom { background-color: #fae4f8; }
 		}
-		&.orange { 
+		&.orange {
 			.top { background-color: #ea7d10; }
 			.bottom { background-color: #fdf2e7; }
 		}
-		&.green { 
+		&.green {
 			.top { background-color: #00b23c; }
 			.bottom { background-color: #cef0da; }
 		}
-		&.green2 { 
+		&.green2 {
 			.top { background-color: #4cb74a; }
 			.bottom { background-color: #cef0da; }
 		}
-		&.dGreen { 
+		&.dGreen {
 			.top { background-color: #008c62; }
 			.bottom { background-color: #ddf4ee; }
 		}
-		&.red { 
+		&.red {
 			.top { background-color: #9b0e26; }
 			.bottom { background-color: #fbe8eb; }
 		}
@@ -627,7 +627,7 @@
 			p:last-of-type {
 				margin-bottom: 0px;
 			}
-		} 
+		}
 	}
 }
 .price {
@@ -693,7 +693,7 @@
 				color: #ffffff;
 				h3,h4,h5 {
 					color: #ffffff;
-					font-size: 22px; 
+					font-size: 22px;
 				}
 				h4 {
 					color: #484b4a;
@@ -770,7 +770,7 @@
 }
 
 .price {
-	font-size: 15px;	
+	font-size: 15px;
 }
 
 .label li:nth-child(even) {
@@ -836,4 +836,46 @@
 			    background-size: contain;
 		}
 	}
+}
+
+.padTB60 .btn-sneak-preview-large  {
+	background-color: white;
+	border: 2px solid #e54761;
+	border-bottom: none;
+	color: #e54761;
+	box-shadow: inset 0px -3px 0px #e54761;
+}
+
+.widget .fa.fa-facebook {
+   background: #4E71A8;
+   color: #fff;
+   padding: 10px;
+   font-size: 20px;
+   width: 40px;
+   height: 40px;
+   border-radius: 20px;
+	 text-align: center;
+}
+
+.widget .fa.fa-twitter {
+	background: #1da1f2;
+	color: #fff;
+	padding: 10px;
+	font-size: 20px;
+	width: 40px;
+	text-align: center;
+	height: 40px;
+	border-radius: 20px;
+}
+
+.widget .fa.fa-linkedin-square {
+	background: #2f81a9;
+	color: #fff;
+	padding: 10px;
+	font-size: 20px;
+	width: 40px;
+	text-align: center;
+	height: 40px;
+	border-radius: 20px;
+	margin-left: 10px;
 }
