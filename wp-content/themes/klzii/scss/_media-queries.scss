@@ -722,6 +722,14 @@
       height: auto !important;
     }
   }
+
+  .coloredBox-line {
+    display: flex;
+    flex-flow: row wrap;
+    .item {
+      flex: 1 1 48%;
+    }
+  }
 }
 
 @media (max-device-width: 767px) and (orientation: portrait) {
