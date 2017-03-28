@@ -52,7 +52,7 @@ do_action( 'genesis_header' );
 //do_action( 'genesis_after_header' );
 ?>
 
-<?php if ( is_active_sidebar( 'header-video-widget' ) ) : ?>
+<?php if ( is_active_sidebar( 'header-video-widget' ) && is_front_page() ) : ?>
     <?php dynamic_sidebar( 'header-video-widget' ); ?>
 <?php endif; ?>
 
