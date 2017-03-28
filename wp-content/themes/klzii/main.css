@@ -1964,6 +1964,7 @@ li.comment {
   padding: 30px;
   background-color: #fff;
   vertical-align: top;
+  height: auto !important;
 }
 .iconBox-text .item p:empty {
   display: none;
@@ -3860,7 +3861,6 @@ i, .icon {
   }
   .entry-content .wrap .iconBox-text .item {
     flex: 1 1 49.3%;
-    height: auto !important;
   }
   .coloredBox-line {
     display: flex;
