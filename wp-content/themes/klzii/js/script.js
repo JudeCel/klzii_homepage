@@ -42,6 +42,7 @@ $(document).ready(function(){
 
     $('.overlay-box .close-box,.overlay-box .overlay').click(function(){
         $('.overlay-box').css('display','none');
+        $('body').css('overflow','scroll');
     });
 
     $('.start-free-trial-popup').click(function(e){
@@ -55,6 +56,7 @@ $(document).ready(function(){
         }
         $('.overlay-box .start-your-free-trial').css('top',screenTop);
         $('.overlay-box').css('display','block');
+        $('body').css('overflow','hidden');
     });
 
     if(windowW >= 1024) {
