@@ -39,25 +39,6 @@ function removeEmptyP() {
 $(document).ready(function(){
     var windowW = $(window).width();
     var maxHeight = 0;
-    /* End Of Equal Height */
-    $(window).resize(function() {
-        if($(window).width() >= 1139) {
-            maxHeight = 0;
-            $(".coloredBox .coloredBoxInner .bottom").each(function(){
-                if ($(this).height() > maxHeight) { maxHeight = $(this); }
-            });
-            $(".coloredBox .coloredBoxInner .bottom").height(maxHeight.height());
-        } else
-        if($(window).width() >= 1024) {
-            maxHeight = 0;
-            $(".coloredBox .coloredBoxInner .bottom").each(function(){
-                if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
-            });
-            $(".coloredBox .coloredBoxInner .bottom").height(maxHeight);
-        } else if(windowW >= 756) {
-            $(".coloredBox .coloredBoxInner .bottom").height('auto');
-        }
-    });
 
     $('.overlay-box .close-box,.overlay-box .overlay').click(function(){
         $('.overlay-box').css('display','none');
