@@ -7,8 +7,34 @@ $(document).ready(function(){
     });
 
     init_home_page_main_banner();
+
+
+    var freeTrial = getUrlParameter('free-trial');
+
+    if (freeTrial == 'open') {
+        var screenTop = $(document).scrollTop();
+        if($(window).width() <= 758) {
+            screenTop = screenTop - 180;
+        }
+        $('.overlay-box .start-your-free-trial').css('top',screenTop);
+        $('.overlay-box').css('display','block');
+    }
 });
 
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
 
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init_home_page_main_banner() {

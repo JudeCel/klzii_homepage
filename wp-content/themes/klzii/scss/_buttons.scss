@@ -58,9 +58,8 @@ button, input[type="submit"], .btn {
 	}
 }
 .btn-pink {
-	background-color: #e54761;
+    background-color: #e2203d;
 	color: #ffffff;
-	box-shadow: inset 0px -3px 0px #963c4d;
     text-shadow: -2px 0px rgba(10,10,10,0.2);
     font-style: italic;
 	&:active,
@@ -111,7 +110,7 @@ button, input[type="submit"], .btn {
 .btn-green {
 	background-color: #56b940;
 	color: #ffffff;
-	box-shadow: inset 0px -3px 0px #1a956b;
+	box-shadow: inset 0px -3px 0px #cbd1d0;
     text-shadow: -2px 0px rgba(10,10,10,0.2);
     font-style: italic;
 	&:active,
@@ -127,10 +126,11 @@ button, input[type="submit"], .btn {
 }
 .btn-green-o {
 	background-color: #ffffff;
-	border: 2px solid #56b940;
+	border: 2px solid #54ad1f;
 	border-bottom: none;
-	color: #56b940;
+	color: #54ad1f;
 	box-shadow: inset 0px -3px 0px #1a956b;
+    padding: 13px 23px;
     font-style: italic;
 	&:active,
 	&:visited {
@@ -142,6 +142,11 @@ button, input[type="submit"], .btn {
 		box-shadow: none;
 		color: #ffffff;
 	}
+}
+.btn-left-space { margin-left:10px; }
+.btn.custom {
+  font-size: 18px;
+  padding:12px 40px;
 }
 .btn-DGreen2 {
 	background-color: #008c62;
