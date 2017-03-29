@@ -4,7 +4,7 @@ $(document).ready(function(){
     });
 
     function setupPlayer() {
-      var player = new Vimeo.Player('video-content', {id: 190188043,loop: false});
+      var player = new Vimeo.Player('video-content-wrapper', {id: 190188043,loop: false});
       player.on('ended', function(data) {
         closePlayer();
       });

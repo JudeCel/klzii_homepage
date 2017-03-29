@@ -1947,13 +1947,22 @@ li.comment {
   display: none;
   background: rgba(1, 1, 1, 0.8);
 }
+#video-content #video-content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 #video-content iframe {
+  order: 2;
   width: 100%;
   height: 100%;
 }
 #video-content #video-close {
+  order: 1;
   color: white;
-  margin: 0 10px;
+  margin: 0 15px;
+  text-align: right;
 }
 .entry-content .splash .wrap.text-white .btn {
   margin-top: 20px;
