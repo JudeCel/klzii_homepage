@@ -107,6 +107,8 @@ $(window).load(function(){
         var index = $(this).index() + 1;
         if(index > 1){$('.price .item .body ul li:nth-of-type('+index+')').removeClass('active');}
     });
+
+    loadChatApplication();
 });
 
 
@@ -114,3 +116,13 @@ $(window).load(function(){
 //inlinemanual js script
 window.inlineManualOptions = { language: 'en'};
 !function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.async=1,e.src="https://inlinemanual.com/embed/player.4d477842920267622ba2d80045849e23.js",e.charset="UTF-8",t.parentNode.insertBefore(e,t)}();
+
+function loadChatApplication() {
+  window.__lc = window.__lc || {};
+  window.__lc.license = 8715146;
+  (function() {
+    var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+  })();
+}
