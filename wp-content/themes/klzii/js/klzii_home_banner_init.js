@@ -1,9 +1,9 @@
 $(document).ready(function(){
     $('.btn.btn-video-watch').click(function(event){
-      setupPlayer();
+      setupPlayer(event);
     });
 
-    function setupPlayer() {
+    function setupPlayer(event) {
       var player = new Vimeo.Player('video-content-wrapper', {id: 190188043,loop: false});
       player.on('ended', function(data) {
         closePlayer();
