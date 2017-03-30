@@ -8,7 +8,6 @@
 	color: #999999;
 	font-size: 14px;
 	font-size: 1.4rem;
-	text-align: center;
 	a {
 	}
 
@@ -24,8 +23,15 @@
 	}
 }
 
-.site-footer .wrap {
-	max-width: 1300px;
+.site-footer .footer-top-padding50 img {
+		vertical-align: middle;
+}
+
+.site-footer .social-content {
+	width: 40%;
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .footer-menu a {
@@ -33,12 +39,16 @@
   text-decoration: none;
   color: #999;
   font-size: 16px;
+	display: inline-block;
+	width: 24%;
 }
 
 .footer-top-padding50 {
   padding: 50px 0;
   padding: 5rem 0;
 	display: inline-block;
+	width: auto;
+	vertical-align: middle;
 }
 
 .footer-top-padding40 {
@@ -115,6 +125,8 @@
 // 	border: 1px solid #ddd;
 // }
 .footer-menu {
+	margin-left: 10px;
+	width: 45%;
 	a {
 		padding: 10px 5px;
 		text-decoration: none;
