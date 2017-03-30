@@ -122,6 +122,9 @@
   .coloredBox .coloredBoxInner .bottom .btn {
     position: static;
   }
+  .coloredBox .coloredBoxInner .bottom {
+    height: auto !important;
+  }
   .header-menu { width:100%; text-align: center; }
 	.show-mobile { display: block; }
 	.hide-mobile { display: none; }
