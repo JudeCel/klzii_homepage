@@ -3305,7 +3305,7 @@ i, .icon {
 }
 @media only screen and (max-width: 465px) {
   .video-buttons {
-    bottom: 5px;
+    bottom: 5px !important;
   }
   .video-buttons h1 {
     font-size: 18px;
@@ -3548,6 +3548,9 @@ i, .icon {
   .video-buttons h1 {
     font-size: 20px;
     margin-bottom: 0;
+  }
+  .video-buttons {
+    bottom: 25px;
   }
   .five-sixths, .four-sixths, .one-fourth, .one-half, .one-sixth, .one-third, .three-fourths, .three-sixths, .two-fourths, .two-sixths, .two-thirds, .wrap-inverse .five-sixths, .wrap-inverse .four-sixths, .wrap-inverse .one-fourth, .wrap-inverse .one-half, .wrap-inverse .one-sixth, .wrap-inverse .one-third, .wrap-inverse .three-fourths, .wrap-inverse .three-sixths, .wrap-inverse .two-fourths, .wrap-inverse .two-sixths, .wrap-inverse .two-thirds {
     float: none;

@@ -52,7 +52,7 @@
     h1 {
       font-size: 18px;
     }
-    bottom: 5px;
+    bottom: 5px !important;
   }
   .btn.custom {
     font-size: 16px;
@@ -380,6 +380,10 @@
     .video-buttons h1 {
       font-size: 20px;
       margin-bottom: 0;
+    }
+
+    .video-buttons {
+        bottom: 25px;
     }
 	.five-sixths,
 	.four-sixths,
