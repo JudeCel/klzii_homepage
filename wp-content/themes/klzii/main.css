@@ -3546,7 +3546,8 @@ i, .icon {
     height: auto;
   }
   .video-buttons h1 {
-    font-size: 32px;
+    font-size: 20px;
+    margin-bottom: 0;
   }
   .five-sixths, .four-sixths, .one-fourth, .one-half, .one-sixth, .one-third, .three-fourths, .three-sixths, .two-fourths, .two-sixths, .two-thirds, .wrap-inverse .five-sixths, .wrap-inverse .four-sixths, .wrap-inverse .one-fourth, .wrap-inverse .one-half, .wrap-inverse .one-sixth, .wrap-inverse .one-third, .wrap-inverse .three-fourths, .wrap-inverse .three-sixths, .wrap-inverse .two-fourths, .wrap-inverse .two-sixths, .wrap-inverse .two-thirds {
     float: none;
