@@ -2581,6 +2581,7 @@ li.comment {
 }
 .site-footer .footer-top-padding50 img {
   vertical-align: middle;
+  width: 115px;
 }
 .site-footer .social-content {
   width: 40%;
@@ -3945,16 +3946,14 @@ i, .icon {
     width: 100% !important;
   }
   .site-footer .footer-menu {
-    padding-left: 0;
+    margin-left: 0px;
+    padding-left: 0 !important;
     width: 100% !important;
   }
 }
 @media only screen and (max-width: 1023px) {
   .site-footer .padT10, .site-footer .footer-top-padding50, .site-footer .footer-menu a {
     padding: 5px;
-  }
-  .site-footer .footer-top-padding50 img {
-    padding: 15px;
   }
   .site-footer .footer-menu {
     width: 70%;
