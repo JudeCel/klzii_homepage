@@ -43,7 +43,7 @@ function addFreeTrialButton(plan) {
 }
 
 function addGetStartedButton(plan) {
-  return "<div class=\"noMargin\"><a data-plan=\"free_account\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"border: 2px solid "+ planBorderColor(plan) + "; color: "+ planBorderColor(plan) + ";\" href=\"#\">GET STARTED</a></div>";
+  return "<div class=\"noMargin padBottom10\"><a data-plan=\"free_account\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"border: 2px solid "+ planBorderColor(plan) + "; color: "+ planBorderColor(plan) + ";\" href=\"#\">GET STARTED</a></div>";
 }
 
 function headerClass(plan) {
@@ -117,25 +117,32 @@ function renderTablePrices(activePlan, tableHTML) {
   return tableHTML;
 }
 
+function featureRowClass(plan) {
+  if (_.includes(plan.id, "free")) return "free_account";
+  else if (_.includes(plan.id, "senior")) return "senior_monthly";
+  else if (_.includes(plan.id, "core")) return "core_monthly";
+  else if (_.includes(plan.id, "junior")) return "junior_monthly";
+}
+
 function renderTableFeatures(activePlan, planDetails, tableHTML) {
   _.forEach(planDetails.features, function(feature) {
     tableHTML += "<tr>";
-    tableHTML += "<td>" + feature.title + "</td>";
+    tableHTML += "<td class=\"plan-option-feature\">" + feature.title + "</td>";
     _.forEach(activePlan, function(plan) {
+      tableHTML += "<td class=\"" + featureRowClass(plan.plan) + "\">"
       if (feature.type === "NumberLimit") {
-        tableHTML += "<td>up to "+ plan.features[feature.key] +"/mth</td>";
+        tableHTML += "up to "+ plan.features[feature.key] +"/mth";
       } else if (feature.type === "Boolean") {
-        tableHTML += "<td>";
         if (plan.features[feature.key]) {
           tableHTML += "<span class=\"fa fa-check text-gray\"></span>";
         }
-        tableHTML += "</td>";
       }
       else if (plan.features[feature.key] < 0) {
-        tableHTML += "<td>unlimited</td>";
+        tableHTML += "unlimited";
       } else {
-        tableHTML += "<td>"+ plan.features[feature.key] +"</td>";
+        tableHTML += plan.features[feature.key];
       }
+      tableHTML += "</td>";
     });
     tableHTML += "</tr>";
   });

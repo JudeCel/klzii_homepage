@@ -51,4 +51,34 @@
   tr td, tr th {
     width: 19%;
   }
+
+  td .fa{
+    font-size: 20px;
+  }
+
+  //dark
+  tr:nth-child(even) {
+    .plan-option-feature {background-color: #ededed;}
+    .junior_monthly {background-color: #cae8c8;}
+    .core_monthly {background-color: #afe3f6;}
+    .senior_monthly {background-color: #cae8c8;}
+    .free_account {background-color: #faf8c3;}
+  }
+  //light
+  tr:nth-child(odd) {
+    .plan-option-feature {background-color: #dedede;}
+    .junior_monthly {background-color: #dbf1dc;}
+    .core_monthly {background-color: #caecf9;}
+    .senior_monthly {background-color: #dbf1dc;}
+    .free_account {background-color: #fdfad7;}
+  }
+
+  .junior_monthly, .core_monthly, .senior_monthly, .free_account {
+    text-align: center;
+  }
+
+  .padBottom10 {
+    padding-bottom: 10px;
+  }
+
 }

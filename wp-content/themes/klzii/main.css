@@ -3313,6 +3313,45 @@ i, .icon {
 .price table tr td, .price table tr th {
   width: 19%;
 }
+.price table td .fa {
+  font-size: 20px;
+}
+.price table tr:nth-child(even) .plan-option-feature {
+  background-color: #ededed;
+}
+.price table tr:nth-child(even) .junior_monthly {
+  background-color: #cae8c8;
+}
+.price table tr:nth-child(even) .core_monthly {
+  background-color: #afe3f6;
+}
+.price table tr:nth-child(even) .senior_monthly {
+  background-color: #cae8c8;
+}
+.price table tr:nth-child(even) .free_account {
+  background-color: #faf8c3;
+}
+.price table tr:nth-child(odd) .plan-option-feature {
+  background-color: #dedede;
+}
+.price table tr:nth-child(odd) .junior_monthly {
+  background-color: #dbf1dc;
+}
+.price table tr:nth-child(odd) .core_monthly {
+  background-color: #caecf9;
+}
+.price table tr:nth-child(odd) .senior_monthly {
+  background-color: #dbf1dc;
+}
+.price table tr:nth-child(odd) .free_account {
+  background-color: #fdfad7;
+}
+.price table .junior_monthly, .price table .core_monthly, .price table .senior_monthly, .price table .free_account {
+  text-align: center;
+}
+.price table .padBottom10 {
+  padding-bottom: 10px;
+}
 @media only screen and (min-width: 767px) {
   .btn.btn-sneak-preview {
     margin-left: 5px;
