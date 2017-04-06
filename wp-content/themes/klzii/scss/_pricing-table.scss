@@ -1,0 +1,54 @@
+.price table {
+  .text {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  .text {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    h4 {
+      color: #484b4a;
+      font-style: italic;
+      font-size: 22px;
+      padding-top: 10px;
+      margin-bottom: 0;
+    }
+  }
+  .subHeader {
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+    text-shadow: #444 2px 2px 2px;
+  }
+  .top {
+    vertical-align: top;
+    padding-right: 5px;
+    display: inline-block;
+    font-size: 35px;
+  }
+  .bottom {
+    font-size: 14px;
+    vertical-align: bottom;
+  }
+
+  tr td {
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    font-size: 15px;
+  }
+  tr td {
+    border: 2px solid #fff;
+  }
+  tr > th {
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  tr td, tr th {
+    width: 19%;
+  }
+}

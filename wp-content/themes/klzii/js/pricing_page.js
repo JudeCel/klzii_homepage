@@ -31,12 +31,33 @@ function mapFeaturesToPlans(plans, planDetails) {
   });
 }
 
-function addFreeTrialButton() {
-  return "<p><a data-plan=\"free_trial\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"box-shadow: none; border: 2px solid #96d393; color: #96d393;\" href=\"#\">START FREE TRIAL</a></p>";
+function planBorderColor(plan) {
+  if (_.includes(plan.id, "free")) return "#bdb795";
+  else if (_.includes(plan.id, "senior")) return "#96d393";
+  else if (_.includes(plan.id, "core")) return "#40b0df";
+  else if (_.includes(plan.id, "junior")) return "#96d393";
 }
 
-function addGetStartedButton() {
-  return "<p class=\"noMargin\"><a data-plan=\"free_account\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"border: 2px solid #bdb795; color: #bdb795;\" href=\"#\">GET STARTED</a></p>";
+function addFreeTrialButton(plan) {
+  return "<div><a data-plan=\"free_trial\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"box-shadow: none; border: 2px solid "+ planBorderColor(plan) + "; color: "+ planBorderColor(plan) + ";\" href=\"#\">START FREE TRIAL</a></div>";
+}
+
+function addGetStartedButton(plan) {
+  return "<div class=\"noMargin\"><a data-plan=\"free_account\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"border: 2px solid "+ planBorderColor(plan) + "; color: "+ planBorderColor(plan) + ";\" href=\"#\">GET STARTED</a></div>";
+}
+
+function headerClass(plan) {
+  if (_.includes(plan.id, "free")) return "bgYellow";
+  else if (_.includes(plan.id, "senior")) return "bgGreen";
+  else if (_.includes(plan.id, "core")) return "bgBlue";
+  else if (_.includes(plan.id, "junior")) return "bgGreen";
+}
+
+function headerPriceClass(plan) {
+  if (_.includes(plan.id, "free")) return "bgYellow";
+  else if (_.includes(plan.id, "senior")) return "bgMdGreen";
+  else if (_.includes(plan.id, "core")) return "bgMdBlue";
+  else if (_.includes(plan.id, "junior")) return "bgMdGreen";
 }
 
 function renderTableHeaders(activePlan, tableHTML) {
@@ -46,11 +67,11 @@ function renderTableHeaders(activePlan, tableHTML) {
     if (_.includes(plan.plan.id, "free")) {
       tableHTML += "<th></th>";
     } else {
-      tableHTML += "<th><div>" +
-                "<div>" +
+      tableHTML += "<th class=\"" + headerClass(plan.plan)+ "\"><div>" +
+                "<div class=\"text\">" +
                   "<h4>" + plan.plan.name + "</h4>" +
                 "</div>"+
-              "<div></th>";
+              "</th>";
     }
   });
   tableHTML += "</tr>";
@@ -60,8 +81,8 @@ function renderTableHeaders(activePlan, tableHTML) {
     if (_.includes(plan.plan.id, "free")) {
       tableHTML += "<th></th>";
     } else {
-      tableHTML += "<th><div>" +
-                  addFreeTrialButton() +
+      tableHTML += "<th class=\"" + headerClass(plan.plan)+ "\"><div class=\"text\">" +
+                  addFreeTrialButton(plan.plan) +
               "<div></th>";
     }
   });
@@ -71,16 +92,21 @@ function renderTableHeaders(activePlan, tableHTML) {
 
 function renderTablePrices(activePlan, tableHTML) {
   //first table column is features
-  tableHTML += "<tr><th>Features</th>";
+  tableHTML += "<tr>" +
+  "<th class=\"bgGray\"><div>" +
+    "<div class=\"text\">" +
+      "<h4>Features</h4>" +
+    "</div>"+
+  "</th>";
   _.forEach(activePlan, function(plan) {
     if (_.includes(plan.plan.id, "free")) {
-      tableHTML += "<th>"+
-      "<h4>" + plan.plan.name + "</h4>" +
-      addGetStartedButton() +
+      tableHTML += "<th class=\"" + headerClass(plan.plan)+ "\"><div class=\"text\">"+
+      "<h4>" + plan.plan.name + "</h4></div>" +
+      addGetStartedButton(plan.plan) +
       "</th>";
     } else {
-      tableHTML += "<th>" +
-        "<div class=\"subHeader bgMdGreen\">" +
+      tableHTML += "<th class=\"subHeader " + headerPriceClass(plan.plan) + " \">" +
+        "<div>" +
           "<p class=\"marB10\"><span>$<b>"+ plan.plan.price/100 +"</b></span><span class=\"bottom\"> / MONTH</span></p>" +
           "<p class=\"noMargin fontS12\">Get 2 Months FREE on all annual plans</p>" +
         "</div>"+
@@ -105,7 +131,9 @@ function renderTableFeatures(activePlan, planDetails, tableHTML) {
         }
         tableHTML += "</td>";
       }
-      else {
+      else if (plan.features[feature.key] < 0) {
+        tableHTML += "<td>unlimited</td>";
+      } else {
         tableHTML += "<td>"+ plan.features[feature.key] +"</td>";
       }
     });
