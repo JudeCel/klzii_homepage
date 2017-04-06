@@ -2,9 +2,9 @@
 var supportedCurrencies = ['AUD', 'USD', 'GBP', 'CAD', 'EUR', 'NZD'];
 var planOrder = ["free", "senior", "core", "junior"];
 
-window.loadPricingPlans = function() {
+window.loadPricingPlans = function(url) {
   $.ajax({
-    url: "http://insider.focus.com:8080/api/public/subscriptionPlans",
+    url: url,
     type: "GET",
     timeout: 30000,
     success: function(data) {
@@ -45,6 +45,11 @@ function addFreeTrialButton(plan) {
 function addGetStartedButton(plan) {
   return "<div class=\"noMargin padBottom10\"><a data-plan=\"free_account\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"border: 2px solid "+ planBorderColor(plan) + "; color: "+ planBorderColor(plan) + ";\" href=\"#\">GET STARTED</a></div>";
 }
+
+function addBuyNowButton(plan) {
+  return "<div class=\"noMargin padBottom10\"><a data-plan=\"senior_monthly\" class=\"btn btn-green smaller full noStyle start-free-trial-popup\" style=\"box-shadow: none; border: 2px solid " + planBorderColor(plan) + "; color: "+ planBorderColor(plan) + "; background: #fff!important;\" href=\"#\">BUY NOW</a></div>";
+}
+
 
 function headerClass(plan) {
   if (_.includes(plan.id, "free")) return "bgYellow";
@@ -87,6 +92,23 @@ function renderTableHeaders(activePlan, tableHTML) {
     }
   });
   tableHTML += "</tr>";
+  return tableHTML;
+}
+
+function renderTableBottomButtons(activePlan, tableHTML) {
+  tableHTML += "<tr>" +
+  "<th></th>";
+  _.forEach(activePlan, function(plan) {
+    if (_.includes(plan.plan.id, "free")) {
+      tableHTML += "<th class=\"" + headerClass(plan.plan)+ "\"><div class=\"text\">"+
+      addGetStartedButton(plan.plan) +
+      "</th>";
+    } else {
+      tableHTML += "<th class=\"" + headerClass(plan.plan)+ "\"><div class=\"text\">"+
+      addBuyNowButton(plan.plan) +
+      "</th>";
+    }
+  });
   return tableHTML;
 }
 
@@ -155,6 +177,7 @@ function renderTable(activePlan, planDetails) {
   tableHTML = renderTableHeaders(activePlan, tableHTML);
   tableHTML = renderTablePrices(activePlan, tableHTML);
   tableHTML = renderTableFeatures(activePlan, planDetails, tableHTML);
+  tableHTML = renderTableBottomButtons(activePlan, tableHTML);
   tableHTML += "</table>";
 
   var container = $( ".price" );
