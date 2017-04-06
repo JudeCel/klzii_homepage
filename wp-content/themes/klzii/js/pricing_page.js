@@ -159,7 +159,6 @@ function renderTable(activePlan, planDetails) {
 
   var container = $( ".price" );
   container.append( tableHTML );
-  console.log("-----", tableHTML);
 }
 
 
