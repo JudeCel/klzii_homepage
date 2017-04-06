@@ -19,7 +19,43 @@ function displayPrices(data) {
   var plans = mapPlans(data.plans.plans);
   var activePlan = planWithCurrency(plans, supportedCurrencies[0]);
   console.log("_____", activePlan);
+
+  renderTable(activePlan);
 }
+
+
+function addFreeTrialButton() {
+  return "<p><a data-plan=\"free_trial\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"box-shadow: none; border: 2px solid #96d393; color: #96d393;\" href=\"#\">START FREE TRIAL</a></p>";
+}
+
+function renderTableHeaders(activePlan, tableHTML) {
+  //first table column will be empty for features
+  tableHTML += "<tr><th></th>";
+  _.forEach(activePlan, function(plan) {
+    if (_.includes(plan.plan.id, "free")) {
+      tableHTML += "<th></th>";
+    } else {
+      tableHTML += "<th><div>" +
+                "<div>" +
+                  "<h4>" + plan.plan.name + "</h4>" +
+                  addFreeTrialButton() +
+                "</div>"+
+              "<div></th>";
+    }
+  });
+  tableHTML += "</tr>";
+  return tableHTML;
+}
+
+function renderTable(activePlan) {
+  var tableHTML = "<table>";
+  tableHTML = renderTableHeaders(activePlan, tableHTML);
+  tableHTML += "</table>";
+
+  console.log("-----", tableHTML);
+}
+
+
 
 function planWithCurrency(plans, currency) {
   if (!plans || !currency) {
@@ -55,7 +91,9 @@ function mapPlans(plans) {
   });
 
   supportedCurrencies.forEach(function(currency) {
-    plans[currency] = _.groupBy(plans[currency], (item) => item.plan.period_unit);
+    plans[currency] = _.groupBy(plans[currency], function(item) {
+      return item.plan.period_unit;
+    });
   });
   return plans;
 }
