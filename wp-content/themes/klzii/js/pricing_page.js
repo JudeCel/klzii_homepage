@@ -1,4 +1,5 @@
 var supportedCurrencies = ['AUD', 'USD', 'GBP', 'CAD', 'EUR', 'NZD'];
+var planOrder = ["free", "senior", "core", "junior"];
 
 window.loadPricingPlans = function() {
   $.ajax({
@@ -23,8 +24,8 @@ function displayPrices(data) {
 function planWithCurrency(plans, currency) {
   if (!plans || !currency) {
     return {};
+    planSelected = [];
   } else {
-    return plans[currency];
   }
 }
 
