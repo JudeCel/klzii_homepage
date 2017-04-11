@@ -575,8 +575,8 @@
 	}
 
 	.price {
-		overflow-x: scroll;
-		overflow-y: hidden;
+		overflow-x: auto;
+    padding-top: 20px; 
 		.item {
 			min-width: 3547px;
 			margin-left: 0px;

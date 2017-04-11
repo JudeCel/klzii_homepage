@@ -92,6 +92,15 @@ function headerClass(plan) {
   else if (_.includes(plan.id, "junior")) return "bgGreen";
 }
 
+function addPopularLabel(plan) {
+  if (_.includes(plan.id, "core")) {
+    return "popular";
+  }
+  else {
+    return "";
+  }
+}
+
 function headerPriceClass(plan) {
   if (_.includes(plan.id, "free")) return "bgYellow";
   else if (_.includes(plan.id, "senior")) return "bgMdGreen";
@@ -107,7 +116,7 @@ function renderTableHeaders(activePlan, tableHTML) {
       tableHTML += "<th></th>";
     } else {
       tableHTML += "<th class=\" cell-padding-0 " + headerClass(plan.plan)+ "\"><div>" +
-                "<div class=\"text padding-bottom-0\">" +
+                "<div class=\"text padding-bottom-0 "+ addPopularLabel(plan.plan) + "\">" +
                   "<h4>" + plan.plan.name + "</h4>" +
                 "</div>"+
               "</th>";
@@ -161,7 +170,7 @@ function renderTablePrices(activePlan, tableHTML) {
     } else {
       tableHTML += "<th class=\"subHeader " + headerPriceClass(plan.plan) + " \">" +
         "<div>" +
-          "<p class=\"marB10\"><span>$<b>"+ plan.plan.price/100 +"</b></span><span class=\"bottom\"> / MONTH</span></p>" +
+          "<p class=\"marB10\"><span>$<b>"+ plan.plan.price/100 +"</b></span><span class=\"bottom\">/MONTH</span></p>" +
           "<p class=\"noMargin fontS12\">Get 2 Months FREE on all annual plans</p>" +
         "</div>"+
       "</th>";

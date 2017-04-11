@@ -3271,6 +3271,7 @@ i, .icon {
   padding: 10px;
   text-align: center;
   color: #fff;
+  position: relative;
 }
 .price table .text h4 {
   color: #484b4a;
@@ -3362,6 +3363,24 @@ i, .icon {
 }
 .price table .border-radius-none {
   border-radius: 0 !important;
+}
+.price table tr th div.popular:before {
+  content: '';
+  background: url(/wp-content/uploads/2016/08/most-popular.png) center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  height: 60px;
+  width: 60px;
+  z-index: 1;
+}
+@media only screen and (max-width: 1139px) {
+  .price table tr th div.popular:before {
+    height: 40px;
+    width: 40px;
+    top: -15px;
+  }
 }
 @media only screen and (min-width: 767px) {
   .btn.btn-sneak-preview {
@@ -3876,8 +3895,8 @@ i, .icon {
     margin-bottom: 5px;
   }
   .price {
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: auto;
+    padding-top: 20px;
   }
   .price .item {
     min-width: 3547px;
