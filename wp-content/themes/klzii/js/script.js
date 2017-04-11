@@ -44,20 +44,7 @@ $(document).ready(function(){
         $('.overlay-box').css('display','none');
         $('body').css('overflow','scroll');
     });
-
-    $('.start-free-trial-popup').click(function(e){
-        e.preventDefault();
-        if ($(this).attr('data-plan')) {
-            $('#input_7_6').val($(this).attr('data-plan'));
-        }
-        var screenTop = $(document).scrollTop();
-        if(windowW <= 758) {
-            screenTop = screenTop - 180;
-        }
-        $('.overlay-box .start-your-free-trial').css('top',screenTop);
-        $('.overlay-box').css('display','block');
-        $('body').css('overflow','hidden');
-    });
+    preparePurchaseButtons();
 
     if(windowW >= 1024) {
         maxHeight = 0;
@@ -125,4 +112,21 @@ function loadChatApplication() {
     lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
   })();
+}
+
+
+function preparePurchaseButtons() {
+  $('.start-free-trial-popup').click(function(e){
+      e.preventDefault();
+      if ($(this).attr('data-plan')) {
+          $('#input_7_6').val($(this).attr('data-plan'));
+      }
+      var screenTop = $(document).scrollTop();
+      if(windowW <= 758) {
+          screenTop = screenTop - 180;
+      }
+      $('.overlay-box .start-your-free-trial').css('top',screenTop);
+      $('.overlay-box').css('display','block');
+      $('body').css('overflow','hidden');
+  });
 }

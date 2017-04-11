@@ -19,6 +19,7 @@ function displayPrices(data) {
   var activePlan = planWithCurrency(plans, supportedCurrencies[0]);
   mapFeaturesToPlans(activePlan, data.plans.planDetails);
   renderTable(activePlan, data.plans.planDetails);
+  preparePurchaseButtons();
 }
 
 function mapFeaturesToPlans(plans, planDetails) {
@@ -42,12 +43,19 @@ function addFreeTrialButton(plan) {
   return "<div><a data-plan=\"free_trial\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"box-shadow: none; border: 2px solid "+ planBorderColor(plan) + "; color: "+ planBorderColor(plan) + ";\" href=\"#\">START FREE TRIAL</a></div>";
 }
 
-function addGetStartedButton(plan) {
-  return "<div class=\"noMargin padBottom10\"><a data-plan=\"free_account\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"border: 2px solid "+ planBorderColor(plan) + "; color: "+ planBorderColor(plan) + ";\" href=\"#\">GET STARTED</a></div>";
+function addGetStartedButton(plan, noPadding) {
+  //var padding = noPadding ? "" : "padBottom10";
+  var padding = "";
+  return "<div class=\"noMargin " + padding + "\"><a data-plan=\"free_account\" class=\"btn btn-white noStyle lePetite full start-free-trial-popup\" style=\"border: 2px solid "+ planBorderColor(plan) + "; color: "+ planBorderColor(plan) + ";\" href=\"#\">GET STARTED</a></div>";
 }
 
 function addBuyNowButton(plan) {
-  return "<div class=\"noMargin padBottom10\"><a data-plan=\"senior_monthly\" class=\"btn btn-green smaller full noStyle start-free-trial-popup\" style=\"box-shadow: none; border: 2px solid " + planBorderColor(plan) + "; color: "+ planBorderColor(plan) + "; background: #fff!important;\" href=\"#\">BUY NOW</a></div>";
+  var planOption = "free_trial";
+  if (_.includes(plan.id, "senior")) planOption = "senior_monthly";
+  else if (_.includes(plan.id, "core")) planOption = "core_monthly";
+  else if (_.includes(plan.id, "junior")) planOption = "junior_monthly";
+
+  return "<div class=\"noMargin\"><a data-plan=\"" + planOption + "\" class=\"btn btn-white smaller lePetite full noStyle start-free-trial-popup\" style=\"box-shadow: none; border: 2px solid " + planBorderColor(plan) + "; color: "+ planBorderColor(plan) + ";\" href=\"#\">BUY NOW</a></div>";
 }
 
 
@@ -72,8 +80,8 @@ function renderTableHeaders(activePlan, tableHTML) {
     if (_.includes(plan.plan.id, "free")) {
       tableHTML += "<th></th>";
     } else {
-      tableHTML += "<th class=\"" + headerClass(plan.plan)+ "\"><div>" +
-                "<div class=\"text\">" +
+      tableHTML += "<th class=\" cell-padding-0 " + headerClass(plan.plan)+ "\"><div>" +
+                "<div class=\"text padding-bottom-0\">" +
                   "<h4>" + plan.plan.name + "</h4>" +
                 "</div>"+
               "</th>";
@@ -86,9 +94,9 @@ function renderTableHeaders(activePlan, tableHTML) {
     if (_.includes(plan.plan.id, "free")) {
       tableHTML += "<th></th>";
     } else {
-      tableHTML += "<th class=\"" + headerClass(plan.plan)+ "\"><div class=\"text\">" +
+      tableHTML += "<th class=\"cell-padding-0 " + headerClass(plan.plan)+ "\"><div class=\"text\">" +
                   addFreeTrialButton(plan.plan) +
-              "<div></th>";
+              "</div></th>";
     }
   });
   tableHTML += "</tr>";
@@ -97,17 +105,15 @@ function renderTableHeaders(activePlan, tableHTML) {
 
 function renderTableBottomButtons(activePlan, tableHTML) {
   tableHTML += "<tr>" +
-  "<th></th>";
+  "<td></td>";
   _.forEach(activePlan, function(plan) {
+    tableHTML += "<td class=\" cell-padding-10 " + headerClass(plan.plan)+ "\">";
     if (_.includes(plan.plan.id, "free")) {
-      tableHTML += "<th class=\"" + headerClass(plan.plan)+ "\"><div class=\"text\">"+
-      addGetStartedButton(plan.plan) +
-      "</th>";
+      tableHTML += addGetStartedButton(plan.plan, true);
     } else {
-      tableHTML += "<th class=\"" + headerClass(plan.plan)+ "\"><div class=\"text\">"+
-      addBuyNowButton(plan.plan) +
-      "</th>";
+      tableHTML += addBuyNowButton(plan.plan, true);
     }
+    tableHTML += "</td>";
   });
   return tableHTML;
 }
@@ -122,10 +128,10 @@ function renderTablePrices(activePlan, tableHTML) {
   "</th>";
   _.forEach(activePlan, function(plan) {
     if (_.includes(plan.plan.id, "free")) {
-      tableHTML += "<th class=\"" + headerClass(plan.plan)+ "\"><div class=\"text\">"+
-      "<h4>" + plan.plan.name + "</h4></div>" +
+      tableHTML += "<th class=\"cell-padding-10 " + headerClass(plan.plan)+ "\"><div class=\"text padding-bottom-0\">"+
+      "<h4 class=\"padBottom10\">" + plan.plan.name + "</h4>" +
       addGetStartedButton(plan.plan) +
-      "</th>";
+      "</div></th>";
     } else {
       tableHTML += "<th class=\"subHeader " + headerPriceClass(plan.plan) + " \">" +
         "<div>" +

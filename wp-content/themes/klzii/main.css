@@ -3264,7 +3264,6 @@ i, .icon {
   display: block !important;
 }
 .price table .text {
-  padding: 10px;
   text-align: center;
   color: #fff;
 }
@@ -3296,7 +3295,7 @@ i, .icon {
   font-size: 14px;
   vertical-align: bottom;
 }
-.price table tr td {
+.price table tr td, .price table tr th {
   padding: 5px 10px;
   margin-bottom: 2px;
   font-size: 15px;
@@ -3351,6 +3350,15 @@ i, .icon {
 }
 .price table .padBottom10 {
   padding-bottom: 10px;
+}
+.price table .cell-padding-10 {
+  padding: 10px;
+}
+.price table .cell-padding-0 {
+  padding: 0;
+}
+.price table .padding-bottom-0 {
+  padding-bottom: 0;
 }
 @media only screen and (min-width: 767px) {
   .btn.btn-sneak-preview {

@@ -1,6 +1,5 @@
 .price table {
   .text {
-    padding: 10px;
     text-align: center;
     color: #fff;
   }
@@ -33,7 +32,7 @@
     vertical-align: bottom;
   }
 
-  tr td {
+  tr td, tr th {
     padding: 5px 10px;
     margin-bottom: 2px;
     font-size: 15px;
@@ -79,5 +78,17 @@
 
   .padBottom10 {
     padding-bottom: 10px;
+  }
+
+  .cell-padding-10 {
+    padding: 10px;
+  }
+
+  .cell-padding-0 {
+    padding: 0;
+  }
+
+  .padding-bottom-0 {
+    padding-bottom: 0;
   }
 }
