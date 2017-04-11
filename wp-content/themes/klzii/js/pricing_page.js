@@ -28,8 +28,11 @@ function displayCurrencies() {
 function displayPrices() {
   var data = window.planData;
   var plans = mapPlans(data.plans.plans);
-  var currencyDisplayed = window.activeCurrency || supportedCurrencies[0];
-  var activePlan = planWithCurrency(plans, currencyDisplayed);
+  if (!window.activeCurrency) {
+    window.activeCurrency = supportedCurrencies[0];
+  }
+
+  var activePlan = planWithCurrency(plans, window.activeCurrency);
   mapFeaturesToPlans(activePlan, data.plans.planDetails);
   renderTable(activePlan, data.plans.planDetails);
   setupCurrencyPicker();
@@ -37,6 +40,7 @@ function displayPrices() {
 }
 
 function setupCurrencyPicker() {
+  $("#currencyDropdown").val(window.activeCurrency);
   $('#currencyDropdown').on('change', function(){
     var selected = $(this).find("option:selected").val();
     window.activeCurrency = selected;
