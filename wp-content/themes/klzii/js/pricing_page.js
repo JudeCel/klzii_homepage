@@ -8,18 +8,40 @@ window.loadPricingPlans = function(url) {
     type: "GET",
     timeout: 30000,
     success: function(data) {
-        displayPrices(data);
+      window.planData = data;
+      displayPrices();
     }, error: function(jqXHR, textStatus, ex) {
     }
   });
 }
 
-function displayPrices(data) {
+function displayCurrencies() {
+  var curr = "<select id=\"currencyDropdown\" class=\"form-control border-radius-none\">";
+  _.forEach(supportedCurrencies, function(currency) {
+    curr += "<option>" + currency + "</option>"
+  });
+  curr += "</select>";
+  return curr;
+}
+
+
+function displayPrices() {
+  var data = window.planData;
   var plans = mapPlans(data.plans.plans);
-  var activePlan = planWithCurrency(plans, supportedCurrencies[0]);
+  var currencyDisplayed = window.activeCurrency || supportedCurrencies[0];
+  var activePlan = planWithCurrency(plans, currencyDisplayed);
   mapFeaturesToPlans(activePlan, data.plans.planDetails);
   renderTable(activePlan, data.plans.planDetails);
+  setupCurrencyPicker();
   preparePurchaseButtons();
+}
+
+function setupCurrencyPicker() {
+  $('#currencyDropdown').on('change', function(){
+    var selected = $(this).find("option:selected").val();
+    window.activeCurrency = selected;
+    displayPrices();
+  });
 }
 
 function mapFeaturesToPlans(plans, planDetails) {
@@ -75,7 +97,7 @@ function headerPriceClass(plan) {
 
 function renderTableHeaders(activePlan, tableHTML) {
   //first table column will be empty for features
-  tableHTML += "<tr><th></th>";
+  tableHTML += "<tr><th>" + displayCurrencies() + "</th>";
   _.forEach(activePlan, function(plan) {
     if (_.includes(plan.plan.id, "free")) {
       tableHTML += "<th></th>";
@@ -187,6 +209,7 @@ function renderTable(activePlan, planDetails) {
   tableHTML += "</table>";
 
   var container = $( ".price" );
+  container.empty();
   container.append( tableHTML );
 }
 

@@ -3360,6 +3360,9 @@ i, .icon {
 .price table .padding-bottom-0 {
   padding-bottom: 0;
 }
+.price table .border-radius-none {
+  border-radius: 0 !important;
+}
 @media only screen and (min-width: 767px) {
   .btn.btn-sneak-preview {
     margin-left: 5px;
