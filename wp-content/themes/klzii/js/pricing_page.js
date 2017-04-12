@@ -10,6 +10,15 @@ var countryCurrencies = {
   "AU": "AUD"
 }
 
+var currencySymbols = {
+  AUD: '$',
+  USD: '$',
+  CAD: '$',
+  NZD: '$',
+  GBP: '£',
+  EUR: '€',
+};
+
 window.loadPricingPlans = function(url, geoInfo) {
   $.ajax({
     url: url,
@@ -187,7 +196,7 @@ function renderTablePrices(activePlan, tableHTML) {
     } else {
       tableHTML += "<th class=\"subHeader " + headerPriceClass(plan.plan) + " \">" +
         "<div>" +
-          "<p class=\"marB10\"><span>$<b>"+ plan.plan.price/100 +"</b></span><span class=\"bottom\">/MONTH</span></p>" +
+          "<p class=\"marB10\"><span>" + currencySymbols[window.activeCurrency] + "<b>"+ plan.plan.price/100 +"</b></span><span class=\"bottom\">/MONTH</span></p>" +
           "<p class=\"noMargin fontS12\">Get 2 Months FREE on all annual plans</p>" +
         "</div>"+
       "</th>";
