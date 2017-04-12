@@ -119,8 +119,13 @@ function preparePurchaseButtons() {
   $('.start-free-trial-popup').click(function(e){
       e.preventDefault();
       if ($(this).attr('data-plan')) {
-          $('#input_7_6').val($(this).attr('data-plan'));
+        $('#input_7_6').val($(this).attr('data-plan'));
       }
+
+      if (window.activeCurrency) {
+        $('#input_7_7').val(window.activeCurrency);
+      }
+
       var screenTop = $(document).scrollTop();
       if(windowW <= 758) {
           screenTop = screenTop - 180;
