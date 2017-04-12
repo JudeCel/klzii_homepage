@@ -218,7 +218,7 @@ function renderTableFeatures(activePlan, planDetails, tableHTML) {
     _.forEach(activePlan, function(plan) {
       tableHTML += "<td class=\"" + featureRowClass(plan.plan) + "\">"
       if (feature.type === "NumberLimit") {
-        tableHTML += "up to "+ plan.features[feature.key] +"/mth";
+        if (plan.features[feature.key]) tableHTML += "up to "+ plan.features[feature.key] +"/mth";
       } else if (feature.type === "Boolean") {
         if (plan.features[feature.key]) {
           tableHTML += "<span class=\"fa fa-check text-gray\"></span>";
@@ -227,7 +227,8 @@ function renderTableFeatures(activePlan, planDetails, tableHTML) {
       else if (plan.features[feature.key] < 0) {
         tableHTML += "unlimited";
       } else {
-        tableHTML += plan.features[feature.key];
+      //  tableHTML += plan.features[feature.key];
+        tableHTML += plan.features[feature.key] || "";
       }
       tableHTML += "</td>";
     });
