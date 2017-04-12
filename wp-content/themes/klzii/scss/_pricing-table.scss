@@ -73,6 +73,11 @@
     .free_account {background-color: #fdfad7;}
   }
 
+  tr:not(:last-child):hover td {
+      background-color: rgba(130, 130, 130, 0.1) !important;
+  }
+
+
   .junior_monthly, .core_monthly, .senior_monthly, .free_account {
     text-align: center;
   }
@@ -95,6 +100,9 @@
 
   .border-radius-none {
     border-radius: 0 !important;
+    min-width: 70px;
+    max-width: 100px;
+    display: inline-block;
   }
 
   tr th div{

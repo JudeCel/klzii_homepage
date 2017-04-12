@@ -42,7 +42,7 @@ function extractCurrency(geoInfo) {
 }
 
 function displayCurrencies() {
-  var curr = "<select id=\"currencyDropdown\" class=\"form-control border-radius-none\">";
+  var curr = "Select Currency <select id=\"currencyDropdown\" class=\"form-control border-radius-none\">";
   _.forEach(supportedCurrencies, function(currency) {
     curr += "<option>" + currency + "</option>"
   });
@@ -136,11 +136,9 @@ function headerPriceClass(plan) {
 
 function renderTableHeaders(activePlan, tableHTML) {
   //first table column will be empty for features
-  tableHTML += "<tr><th>" + displayCurrencies() + "</th>";
+  tableHTML += "<tr><th colspan=\"2\">" + displayCurrencies() + "</th>";
   _.forEach(activePlan, function(plan) {
-    if (_.includes(plan.plan.id, "free")) {
-      tableHTML += "<th></th>";
-    } else {
+    if (!_.includes(plan.plan.id, "free")) {
       tableHTML += "<th class=\" cell-padding-0 " + headerClass(plan.plan)+ "\"><div>" +
                 "<div class=\"text padding-bottom-0 "+ addPopularLabel(plan.plan) + "\">" +
                   "<h4>" + plan.plan.name + "</h4>" +
