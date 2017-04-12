@@ -2,17 +2,34 @@
 var supportedCurrencies = ['AUD', 'USD', 'GBP', 'CAD', 'EUR', 'NZD'];
 var planOrder = ["free", "senior", "core", "junior"];
 
-window.loadPricingPlans = function(url) {
+var countryCurrencies = {
+  "NZ": "NZD",
+  "CA": "CAD",
+  "GB": "GBP",
+  "US": "USD",
+  "AU": "AUD"
+}
+
+window.loadPricingPlans = function(url, geoInfo) {
   $.ajax({
     url: url,
     type: "GET",
     timeout: 30000,
     success: function(data) {
       window.planData = data;
+      extractCurrency(geoInfo);
       displayPrices();
     }, error: function(jqXHR, textStatus, ex) {
     }
   });
+}
+
+function extractCurrency(geoInfo) {
+  var currency = countryCurrencies[geoInfo.country];
+  if (!currency) {
+    currency = geoInfo.continent == "EU" ? "EUR" : "AUD";
+  }
+  window.activeCurrency = currency;
 }
 
 function displayCurrencies() {
