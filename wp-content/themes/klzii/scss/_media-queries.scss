@@ -576,7 +576,7 @@
 
 	.price {
 		overflow-x: auto;
-    padding-top: 20px; 
+    padding-top: 20px;
 		.item {
 			min-width: 3547px;
 			margin-left: 0px;
@@ -800,5 +800,18 @@
       display: block;
     }
 
+  }
+}
+
+//header and main content behavior
+@media (min-width: 1023px) {
+  .site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+  }
+  .site-inner {
+    margin-top: 126px;
   }
 }

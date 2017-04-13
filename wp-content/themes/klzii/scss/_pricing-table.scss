@@ -1,9 +1,15 @@
 .price table {
+  .features {
+    min-width: 225px;
+    vertical-align: bottom;
+    .column-title {
+      text-align: left;
+    }
+  }
+
   .text {
     text-align: center;
     color: #fff;
-  }
-  .text {
     padding: 10px;
     text-align: center;
     color: #fff;
@@ -33,27 +39,28 @@
     vertical-align: bottom;
   }
 
-  tr td, tr th {
-    padding: 5px 10px;
-    margin-bottom: 2px;
-    font-size: 15px;
+  tr {
+    td, th {
+      padding: 5px 10px;
+      margin-bottom: 2px;
+      font-size: 15px;
+      width: 19%;
+    }
+    td {
+      border: 2px solid #fff;
+      line-height: 1.42857143;
+      .fa{
+        font-size: 20px;
+      }
+    }
   }
-  tr td {
-    border: 2px solid #fff;
-  }
+
   tr > th {
     border-left: 2px solid #fff;
     border-right: 2px solid #fff;
     padding-left: 10px;
     padding-right: 10px;
-  }
-
-  tr td, tr th {
-    width: 19%;
-  }
-
-  td .fa{
-    font-size: 20px;
+    text-transform: none;
   }
 
   //dark

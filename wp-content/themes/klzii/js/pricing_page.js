@@ -180,9 +180,9 @@ function renderTableBottomButtons(activePlan, tableHTML) {
 function renderTablePrices(activePlan, tableHTML) {
   //first table column is features
   tableHTML += "<tr>" +
-  "<th class=\"bgGray\"><div>" +
+  "<th class=\"bgGray features\"><div>" +
     "<div class=\"text\">" +
-      "<h4>Features</h4>" +
+      "<h4 class=\"column-title\">Features</h4>" +
     "</div>"+
   "</th>";
   _.forEach(activePlan, function(plan) {

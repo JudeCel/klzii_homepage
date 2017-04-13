@@ -3263,11 +3263,16 @@ i, .icon {
 .page-id-371 #text-13 .splashForm, .page-id-371 #text-13 .splashCharacter {
   display: block !important;
 }
+.price table .features {
+  min-width: 225px;
+  vertical-align: bottom;
+}
+.price table .features .column-title {
+  text-align: left;
+}
 .price table .text {
   text-align: center;
   color: #fff;
-}
-.price table .text {
   padding: 10px;
   text-align: center;
   color: #fff;
@@ -3300,21 +3305,21 @@ i, .icon {
   padding: 5px 10px;
   margin-bottom: 2px;
   font-size: 15px;
+  width: 19%;
 }
 .price table tr td {
   border: 2px solid #fff;
+  line-height: 1.42857;
+}
+.price table tr td .fa {
+  font-size: 20px;
 }
 .price table tr > th {
   border-left: 2px solid #fff;
   border-right: 2px solid #fff;
   padding-left: 10px;
   padding-right: 10px;
-}
-.price table tr td, .price table tr th {
-  width: 19%;
-}
-.price table td .fa {
-  font-size: 20px;
+  text-transform: none;
 }
 .price table tr:nth-child(even) .plan-option-feature {
   background-color: #ededed;
@@ -4098,5 +4103,16 @@ i, .icon {
   }
   .site-footer .padT10 {
     display: block;
+  }
+}
+@media (min-width: 1023px) {
+  .site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+  }
+  .site-inner {
+    margin-top: 126px;
   }
 }
