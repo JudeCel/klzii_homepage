@@ -4047,14 +4047,10 @@ i, .icon {
   }
   .entry-content .wrap .iconBox-text .item {
     height: auto !important;
-    flex: 1 1 49.3%;
   }
   .coloredBox-line {
     display: flex;
     flex-flow: row wrap;
-  }
-  .coloredBox-line .item {
-    flex: 1 1 48%;
   }
   .wrap .one-half img {
     max-width: 400px;
