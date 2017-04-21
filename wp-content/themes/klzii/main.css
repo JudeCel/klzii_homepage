@@ -4028,7 +4028,7 @@ i, .icon {
     height: auto !important;
     padding-bottom: 80px;
     order: 2;
-    position: initial;
+    position: static;
   }
   #who-we-help .bottom .btn {
     bottom: 7px !important;
