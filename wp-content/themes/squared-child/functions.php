@@ -81,10 +81,11 @@ function js_variables()
         json_encode($variables) .
         '</script>');
 }
+
 add_action('wp_head', 'js_variables');
 
 add_action('wp_ajax_get_redirect_url', 'get_prices_redirect_url');
-add_action('wp_ajax_get_redirect_url', 'get_prices_redirect_url');
+add_action('wp_ajax_nopriv_get_redirect_url', 'get_prices_redirect_url');
 
 function get_prices_redirect_url()
 {
