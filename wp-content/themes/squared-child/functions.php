@@ -62,7 +62,7 @@ function diatom_redirect_to_currency_pages()
     $country_iso = do_shortcode("[geoip_detect2 property=\"country.isoCode\"]");
 
     if ($field === 'true') {
-        if ($country_iso == 'NZD') {
+        if ($country_iso == 'NZ') {
             wp_redirect(get_permalink($nzd), 301);
         } else {
             wp_redirect(get_permalink($usd), 301);
